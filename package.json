@@ -1,0 +1,23 @@
+{
+  "name": "verdant-organic-plant-nursery",
+  "version": "1.0.0",
+  "private": false,
+  "description": "VERDANT — a full-stack organic plant nursery storefront with a Node.js API and password-protected admin panel. Zero dependencies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "plant-nursery",
+    "ecommerce",
+    "nodejs",
+    "vanilla-js",
+    "zero-dependencies",
+    "rest-api"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

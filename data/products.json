@@ -1,0 +1,1673 @@
+{
+  "products": [
+    {
+      "id": "pothos",
+      "name": "Money Plant",
+      "sci": "Epipremnum aureum",
+      "category": "indoor",
+      "collections": [
+        "air",
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 249,
+      "originalPrice": 349,
+      "desc": "A trailing classic with heart-shaped, marbled leaves. Forgiving, fast-growing and happy in most rooms.",
+      "img": "assets/img/pothos.jpg",
+      "rating": 4.8,
+      "reviews": 412,
+      "inStock": true,
+      "stock": 24,
+      "difficulty": "Easy",
+      "sunlight": [
+        "low",
+        "medium",
+        "bright"
+      ],
+      "water": "weekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Free-draining potting mix with cocopeat and a little compost.",
+      "temp": "18–29°C · keep away from cold draughts",
+      "humidity": "Average home humidity; enjoys occasional misting",
+      "fertilizer": "Balanced organic feed every 4–6 weeks in spring and summer",
+      "repotting": "Repot every 1–2 years when roots circle the pot",
+      "pruning": "Trim leggy vines just above a node to encourage bushier growth",
+      "size": "Medium",
+      "leaf": "Patterned",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Living room",
+        "Office",
+        "Bedroom",
+        "Kitchen"
+      ],
+      "tags": [
+        "Bestseller",
+        "Beginner Friendly",
+        "Air-Purifying"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 98,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Yellowing leaves usually mean overwatering",
+        "Brown tips from dry air or inconsistent watering"
+      ],
+      "careId": "pothos"
+    },
+    {
+      "id": "snake-plant",
+      "name": "Snake Plant",
+      "sci": "Dracaena trifasciata",
+      "category": "indoor",
+      "collections": [
+        "air",
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 399,
+      "originalPrice": 499,
+      "desc": "Upright, architectural and famously tolerant. Thrives on neglect and looks sharp in any corner.",
+      "img": "assets/img/snake-plant-2.jpg",
+      "rating": 4.9,
+      "reviews": 528,
+      "inStock": true,
+      "stock": 31,
+      "difficulty": "Easy",
+      "sunlight": [
+        "very-low",
+        "low",
+        "medium",
+        "bright"
+      ],
+      "water": "biweekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Gritty, fast-draining cactus or succulent mix.",
+      "temp": "18–30°C · tolerates dry indoor air",
+      "humidity": "Low to average humidity is fine",
+      "fertilizer": "Half-strength feed twice in the growing season",
+      "repotting": "Only when tightly pot-bound — every 2–3 years",
+      "pruning": "Remove damaged leaves at the base with clean snips",
+      "size": "Medium",
+      "leaf": "Patterned",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Bedroom",
+        "Living room",
+        "Office"
+      ],
+      "tags": [
+        "Bestseller",
+        "Low Maintenance",
+        "Beginner Friendly"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 96,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Soft, mushy base indicates overwatering",
+        "Wrinkled leaves suggest long dry spells"
+      ],
+      "careId": "snake-plant"
+    },
+    {
+      "id": "peace-lily",
+      "name": "Peace Lily",
+      "sci": "Spathiphyllum wallisii",
+      "category": "indoor",
+      "collections": [
+        "flowering",
+        "air"
+      ],
+      "kind": "plant",
+      "price": 449,
+      "originalPrice": 549,
+      "desc": "Glossy leaves and elegant white spathes. It politely droops when thirsty, which makes it easy to read.",
+      "img": "assets/img/peace-lily.jpg",
+      "rating": 4.7,
+      "reviews": 366,
+      "inStock": true,
+      "stock": 18,
+      "difficulty": "Easy",
+      "sunlight": [
+        "low",
+        "medium"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Rich, moisture-retentive mix with good drainage.",
+      "temp": "18–27°C · avoid cold windowsills",
+      "humidity": "Prefers higher humidity — group plants or use a pebble tray",
+      "fertilizer": "Organic liquid feed every 6 weeks in spring and summer",
+      "repotting": "Every 2 years, in spring, one pot size up",
+      "pruning": "Cut spent flowers at the base; remove yellowing leaves",
+      "size": "Medium",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Wellness"
+      ],
+      "placement": [
+        "Living room",
+        "Bedroom",
+        "Office"
+      ],
+      "tags": [
+        "Bestseller",
+        "Air-Purifying",
+        "Flowering"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 92,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Brown tips from dry air or fertilizer buildup",
+        "No flowers in very low light"
+      ],
+      "careId": "peace-lily"
+    },
+    {
+      "id": "monstera",
+      "name": "Monstera Deliciosa",
+      "sci": "Monstera deliciosa",
+      "category": "indoor",
+      "collections": [
+        "air"
+      ],
+      "kind": "plant",
+      "price": 899,
+      "originalPrice": 1099,
+      "desc": "The statement plant: broad, split leaves that make a room feel instantly lush and tropical.",
+      "img": "assets/img/monstera.jpg",
+      "rating": 4.8,
+      "reviews": 604,
+      "inStock": true,
+      "stock": 12,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "medium",
+        "bright"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Chunky, airy mix — cocopeat, bark and compost.",
+      "temp": "18–29°C · protect from cold draughts",
+      "humidity": "Enjoys 50%+ humidity; misting helps new leaves unfurl",
+      "fertilizer": "Organic feed monthly through spring and summer",
+      "repotting": "Every 1–2 years; provide a moss pole for support",
+      "pruning": "Remove old lower leaves; wipe leaves monthly",
+      "size": "Large",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Living room",
+        "Bedroom",
+        "Office"
+      ],
+      "tags": [
+        "Bestseller",
+        "Statement Plant"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 95,
+      "organic": "Organic-inspired",
+      "problems": [
+        "No leaf splits without enough light",
+        "Yellow edges from overwatering"
+      ],
+      "careId": "monstera"
+    },
+    {
+      "id": "spider-plant",
+      "name": "Spider Plant",
+      "sci": "Chlorophytum comosum",
+      "category": "indoor",
+      "collections": [
+        "air",
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 249,
+      "originalPrice": null,
+      "desc": "Arching striped leaves and baby plantlets on runners — one of the friendliest plants for beginners.",
+      "img": "assets/img/spider-plant.jpg",
+      "rating": 4.6,
+      "reviews": 289,
+      "inStock": true,
+      "stock": 27,
+      "difficulty": "Easy",
+      "sunlight": [
+        "low",
+        "medium",
+        "bright"
+      ],
+      "water": "weekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "General potting mix with a little perlite or cocopeat.",
+      "temp": "16–27°C · happy in most homes",
+      "humidity": "Adaptable; appreciate occasional misting",
+      "fertilizer": "Diluted organic feed monthly in spring and summer",
+      "repotting": "Every 1–2 years; roots are chunky and quick to fill pots",
+      "pruning": "Trim brown tips diagonally; remove old outer leaves",
+      "size": "Small",
+      "leaf": "Patterned",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Kitchen",
+        "Bathroom",
+        "Office",
+        "Living room"
+      ],
+      "tags": [
+        "Pet Friendly",
+        "Beginner Friendly",
+        "Air-Purifying"
+      ],
+      "bestseller": false,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 88,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Brown tips from fluoride or dry air",
+        "Pale leaves in very low light"
+      ],
+      "careId": "spider-plant"
+    },
+    {
+      "id": "zz-plant",
+      "name": "ZZ Plant",
+      "sci": "Zamioculcas zamiifolia",
+      "category": "indoor",
+      "collections": [
+        "lowmaintenance",
+        "air"
+      ],
+      "kind": "plant",
+      "price": 499,
+      "originalPrice": 599,
+      "desc": "Glossy, waxy foliage on upright stems. Stores water in its rhizomes, so it forgives missed waterings.",
+      "img": "assets/img/zz-plant.jpg",
+      "rating": 4.8,
+      "reviews": 341,
+      "inStock": true,
+      "stock": 16,
+      "difficulty": "Easy",
+      "sunlight": [
+        "very-low",
+        "low",
+        "medium"
+      ],
+      "water": "biweekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Well-draining mix; a succulent blend works well.",
+      "temp": "18–28°C · avoid cold below 12°C",
+      "humidity": "Average home humidity",
+      "fertilizer": "Feed twice a year — it is not a heavy feeder",
+      "repotting": "Every 2–3 years when rhizomes crowd the pot",
+      "pruning": "Remove older stems at the base to keep it tidy",
+      "size": "Medium",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Office",
+        "Bedroom",
+        "Living room"
+      ],
+      "tags": [
+        "Low Maintenance",
+        "Low Light",
+        "Beginner Friendly"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 91,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Yellowing from too much water",
+        "Leggy growth in deep shade"
+      ],
+      "careId": "zz-plant"
+    },
+    {
+      "id": "areca-palm",
+      "name": "Areca Palm",
+      "sci": "Dypsis lutescens",
+      "category": "indoor",
+      "collections": [
+        "air"
+      ],
+      "kind": "plant",
+      "price": 849,
+      "originalPrice": 999,
+      "desc": "Feathery fronds that soften a room. A generous, tropical presence that is non-toxic to pets.",
+      "img": "assets/img/areca-palm.jpg",
+      "rating": 4.5,
+      "reviews": 198,
+      "inStock": true,
+      "stock": 9,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "medium",
+        "bright"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Moisture-retentive but free-draining potting mix.",
+      "temp": "18–30°C · keep away from AC draughts",
+      "humidity": "Appreciates humidity; brown tips signal dry air",
+      "fertilizer": "Organic feed every 6 weeks in the growing season",
+      "repotting": "Every 2 years in spring",
+      "pruning": "Cut brown fronds at the base; never cut the crown",
+      "size": "Large",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Wellness"
+      ],
+      "placement": [
+        "Living room",
+        "Office",
+        "Balcony"
+      ],
+      "tags": [
+        "Pet Friendly",
+        "Air-Purifying"
+      ],
+      "bestseller": false,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 82,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Brown tips from dry air",
+        "Mites love dry, dusty fronds"
+      ],
+      "careId": "areca-palm"
+    },
+    {
+      "id": "rubber-plant",
+      "name": "Rubber Plant",
+      "sci": "Ficus elastica",
+      "category": "indoor",
+      "collections": [],
+      "kind": "plant",
+      "price": 649,
+      "originalPrice": 749,
+      "desc": "Broad, burgundy-tinged leaves that shine. A sculptural indoor tree that grows with you.",
+      "img": "assets/img/rubber-plant.jpg",
+      "rating": 4.6,
+      "reviews": 223,
+      "inStock": true,
+      "stock": 11,
+      "difficulty": "Easy",
+      "sunlight": [
+        "medium",
+        "bright"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Well-draining, compost-rich mix.",
+      "temp": "18–28°C · dislikes cold and draughts",
+      "humidity": "Average humidity; wipe leaves monthly",
+      "fertilizer": "Organic feed monthly in spring and summer",
+      "repotting": "Every 2 years, in spring",
+      "pruning": "Prune in spring to control height and encourage branching",
+      "size": "Large",
+      "leaf": "Colorful",
+      "purpose": [
+        "Decoration"
+      ],
+      "placement": [
+        "Living room",
+        "Office"
+      ],
+      "tags": [
+        "Statement Plant"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 78,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Dropping lower leaves after drafts",
+        "White sap when pruned — wear gloves"
+      ],
+      "careId": "rubber-plant"
+    },
+    {
+      "id": "calathea",
+      "name": "Calathea Orbifolia",
+      "sci": "Calathea orbifolia",
+      "category": "indoor",
+      "collections": [],
+      "kind": "plant",
+      "price": 549,
+      "originalPrice": 649,
+      "desc": "Striped, silver-green leaves that fold at dusk. Rewarding for patient plant parents who love patterns.",
+      "img": "assets/img/calathea.jpg",
+      "rating": 4.3,
+      "reviews": 156,
+      "inStock": true,
+      "stock": 7,
+      "difficulty": "Challenging",
+      "sunlight": [
+        "low",
+        "medium"
+      ],
+      "water": "frequent",
+      "maintenance": "High",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Light, moisture-retentive mix; avoid heavy compost.",
+      "temp": "18–27°C · no cold draughts, no radiators",
+      "humidity": "High humidity (60%+) is key",
+      "fertilizer": "Very diluted organic feed monthly in summer",
+      "repotting": "Every 1–2 years in spring",
+      "pruning": "Remove crisped leaves at soil level",
+      "size": "Medium",
+      "leaf": "Patterned",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Bathroom",
+        "Bedroom",
+        "Living room"
+      ],
+      "tags": [
+        "Pet Friendly",
+        "Patterned Leaves"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 71,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Crispy edges from dry air",
+        "Leaf curl from tap water minerals"
+      ],
+      "careId": "calathea"
+    },
+    {
+      "id": "fern",
+      "name": "Boston Fern",
+      "sci": "Nephrolepis exaltata",
+      "category": "indoor",
+      "collections": [
+        "air"
+      ],
+      "kind": "plant",
+      "price": 349,
+      "originalPrice": null,
+      "desc": "Soft, feathered fronds that bring a cool, woodland feel — ideal for bathrooms and shaded corners.",
+      "img": "assets/img/fern.jpg",
+      "rating": 4.4,
+      "reviews": 142,
+      "inStock": true,
+      "stock": 14,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "low",
+        "medium"
+      ],
+      "water": "frequent",
+      "maintenance": "High",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Peat-free, moisture-retentive mix with cocopeat.",
+      "temp": "16–26°C · thrives in cooler rooms",
+      "humidity": "High humidity — bathrooms suit it best",
+      "fertilizer": "Half-strength organic feed monthly in summer",
+      "repotting": "Every 1–2 years or when the root ball fills the pot",
+      "pruning": "Snip spent fronds at the base to keep it dense",
+      "size": "Medium",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Wellness"
+      ],
+      "placement": [
+        "Bathroom",
+        "Bedroom",
+        "Living room"
+      ],
+      "tags": [
+        "Pet Friendly",
+        "Air-Purifying"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 69,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Crispy fronds in dry air",
+        "Shedding leaflets when under-watered"
+      ],
+      "careId": "fern"
+    },
+    {
+      "id": "anthurium",
+      "name": "Anthurium",
+      "sci": "Anthurium andraeanum",
+      "category": "indoor",
+      "collections": [
+        "flowering"
+      ],
+      "kind": "plant",
+      "price": 699,
+      "originalPrice": 799,
+      "desc": "Waxy red spathes that last for weeks at a time. A tropical bloomer that performs in bright rooms.",
+      "img": "assets/img/anthurium.jpg",
+      "rating": 4.5,
+      "reviews": 174,
+      "inStock": true,
+      "stock": 8,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "medium",
+        "bright"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Chunky, orchid-style mix with excellent drainage.",
+      "temp": "20–29°C · loves warmth",
+      "humidity": "High humidity; mist the aerial roots",
+      "fertilizer": "Organic feed every 6 weeks in spring and summer",
+      "repotting": "Every 2 years in spring",
+      "pruning": "Remove faded spathes so energy goes to new blooms",
+      "size": "Medium",
+      "leaf": "Colorful",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Living room",
+        "Office",
+        "Bedroom"
+      ],
+      "tags": [
+        "Flowering"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 74,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Brown leaf edges from low humidity",
+        "No flowers in low light"
+      ],
+      "careId": "anthurium"
+    },
+    {
+      "id": "hibiscus",
+      "name": "Hibiscus",
+      "sci": "Hibiscus rosa-sinensis",
+      "category": "outdoor",
+      "collections": [
+        "flowering"
+      ],
+      "kind": "plant",
+      "price": 449,
+      "originalPrice": 549,
+      "desc": "Big, bold blooms that open fresh each morning. A sun-lover for balconies and sunny patios.",
+      "img": "assets/img/hibiscus.jpg",
+      "rating": 4.4,
+      "reviews": 132,
+      "inStock": true,
+      "stock": 13,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "frequent",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Rich, well-draining mix; top-dress with compost monthly.",
+      "temp": "20–35°C · protect below 10°C",
+      "humidity": "Tolerates Indian humidity well",
+      "fertilizer": "Organic feed fortnightly in the flowering season",
+      "repotting": "Every 1–2 years in spring",
+      "pruning": "Prune lightly after each flush of flowers",
+      "size": "Large",
+      "leaf": "Colorful",
+      "purpose": [
+        "Decoration",
+        "Gardening"
+      ],
+      "placement": [
+        "Balcony",
+        "Outdoor garden"
+      ],
+      "tags": [
+        "Flowering",
+        "Sun Lover",
+        "Pet Friendly"
+      ],
+      "bestseller": true,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 84,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Bud drop from inconsistent watering",
+        "Aphids on new shoots"
+      ],
+      "careId": "hibiscus"
+    },
+    {
+      "id": "jasmine",
+      "name": "Arabian Jasmine",
+      "sci": "Jasminum sambac",
+      "category": "outdoor",
+      "collections": [
+        "flowering"
+      ],
+      "kind": "plant",
+      "price": 399,
+      "originalPrice": null,
+      "desc": "Small white flowers with an unforgettable evening fragrance. A traditional balcony favourite.",
+      "img": "assets/img/jasmine.jpg",
+      "rating": 4.6,
+      "reviews": 187,
+      "inStock": true,
+      "stock": 15,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "caution",
+        "cats": "caution"
+      },
+      "soil": "Well-draining, slightly acidic mix.",
+      "temp": "20–35°C · frost sensitive",
+      "humidity": "Average to high humidity",
+      "fertilizer": "Organic feed every 3–4 weeks in the growing season",
+      "repotting": "Every 2 years or when roots fill the pot",
+      "pruning": "Prune after flowering to encourage new flowering shoots",
+      "size": "Medium",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Wellness"
+      ],
+      "placement": [
+        "Balcony",
+        "Outdoor garden",
+        "Living room"
+      ],
+      "tags": [
+        "Flowering",
+        "Fragrant"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 76,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Few flowers in shade",
+        "Spider mites in dry indoor air"
+      ],
+      "careId": "jasmine"
+    },
+    {
+      "id": "bonsai",
+      "name": "Ficus Bonsai",
+      "sci": "Ficus retusa",
+      "category": "indoor",
+      "collections": [],
+      "kind": "plant",
+      "price": 1499,
+      "originalPrice": 1799,
+      "desc": "A living sculpture in a shallow tray. Requires patience and regular shaping — deeply rewarding.",
+      "img": "assets/img/bonsai.jpg",
+      "rating": 4.7,
+      "reviews": 96,
+      "inStock": true,
+      "stock": 4,
+      "difficulty": "Challenging",
+      "sunlight": [
+        "bright",
+        "medium"
+      ],
+      "water": "frequent",
+      "maintenance": "High",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Free-draining bonsai substrate: grit, cocopeat and compost.",
+      "temp": "18–30°C · avoid cold draughts",
+      "humidity": "Moderate; a humidity tray helps",
+      "fertilizer": "Specialist bonsai feed every 2 weeks in the growing season",
+      "repotting": "Every 2–3 years with root pruning in spring",
+      "pruning": "Regular pinching and wiring to maintain shape",
+      "size": "Small",
+      "leaf": "Green",
+      "purpose": [
+        "Learning",
+        "Decoration"
+      ],
+      "placement": [
+        "Living room",
+        "Office",
+        "Balcony"
+      ],
+      "tags": [
+        "New Arrival",
+        "Collector"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": true,
+      "popularity": 67,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Leaf drop when moved suddenly",
+        "Dry soil for a day can scorch foliage"
+      ],
+      "careId": "bonsai"
+    },
+    {
+      "id": "eucalyptus",
+      "name": "Silver Eucalyptus",
+      "sci": "Eucalyptus cinerea",
+      "category": "outdoor",
+      "collections": [],
+      "kind": "plant",
+      "price": 599,
+      "originalPrice": null,
+      "desc": "Silvery, rounded leaves with a clean scent. Beautiful in bright windows and on sunny balconies.",
+      "img": "assets/img/eucalyptus.jpg",
+      "rating": 4.2,
+      "reviews": 78,
+      "inStock": true,
+      "stock": 6,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Gritty, free-draining mix.",
+      "temp": "15–30°C · needs good airflow",
+      "humidity": "Low to average; dislikes stuffy rooms",
+      "fertilizer": "Light organic feed monthly in the growing season",
+      "repotting": "Repot annually; it grows quickly",
+      "pruning": "Pinch tips for a bushier shape and harvest stems regularly",
+      "size": "Medium",
+      "leaf": "Colorful",
+      "purpose": [
+        "Decoration",
+        "Wellness"
+      ],
+      "placement": [
+        "Balcony",
+        "Outdoor garden"
+      ],
+      "tags": [
+        "New Arrival",
+        "Fragrant"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": true,
+      "popularity": 61,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Leggy growth in shade",
+        "Drooping after dry spells"
+      ],
+      "careId": "eucalyptus"
+    },
+    {
+      "id": "aloe-vera",
+      "name": "Aloe Vera",
+      "sci": "Aloe vera",
+      "category": "succulents",
+      "collections": [
+        "medicinal",
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 299,
+      "originalPrice": 379,
+      "desc": "Thick, gel-filled leaves that love sun and dry air. Under-watering is kinder to it than over-watering.",
+      "img": "assets/img/aloe-vera.jpg",
+      "rating": 4.7,
+      "reviews": 388,
+      "inStock": true,
+      "stock": 22,
+      "difficulty": "Easy",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "biweekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Gritty cactus mix with pumice or coarse sand.",
+      "temp": "18–32°C · protect from frost",
+      "humidity": "Low humidity — dry air is fine",
+      "fertilizer": "Rarely needed; once in spring if repotted",
+      "repotting": "Every 2–3 years or when pups crowd the pot",
+      "pruning": "Harvest outer leaves at the base when needed",
+      "size": "Medium",
+      "leaf": "Green",
+      "purpose": [
+        "Wellness",
+        "Decoration"
+      ],
+      "placement": [
+        "Balcony",
+        "Kitchen",
+        "Living room"
+      ],
+      "tags": [
+        "Low Maintenance",
+        "Medicinal",
+        "Sun Lover"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 90,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Mushy stem from overwatering",
+        "Thin, curled leaves when very thirsty"
+      ],
+      "careId": "aloe-vera"
+    },
+    {
+      "id": "jade-plant",
+      "name": "Jade Plant",
+      "sci": "Crassula ovata",
+      "category": "succulents",
+      "collections": [
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 329,
+      "originalPrice": null,
+      "desc": "A tiny tree with plump jade-green leaves. Slow, steady and famously long-lived.",
+      "img": "assets/img/jade-plant.jpg",
+      "rating": 4.6,
+      "reviews": 254,
+      "inStock": true,
+      "stock": 19,
+      "difficulty": "Easy",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "biweekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "toxic",
+        "cats": "toxic"
+      },
+      "soil": "Free-draining succulent mix.",
+      "temp": "16–28°C · cool winter rest is beneficial",
+      "humidity": "Low humidity",
+      "fertilizer": "Succulent feed twice in the growing season",
+      "repotting": "Every 2–3 years",
+      "pruning": "Pinch growing tips to keep a compact shape",
+      "size": "Small",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration",
+        "Wellness"
+      ],
+      "placement": [
+        "Living room",
+        "Office",
+        "Balcony"
+      ],
+      "tags": [
+        "Low Maintenance",
+        "Beginner Friendly"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 80,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Leaf drop from overwatering",
+        "Stretching toward weak light"
+      ],
+      "careId": "jade-plant"
+    },
+    {
+      "id": "echeveria",
+      "name": "Echeveria Rosette",
+      "sci": "Echeveria elegans",
+      "category": "succulents",
+      "collections": [
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 199,
+      "originalPrice": 249,
+      "desc": "A perfectly geometric rosette in soft blue-green. Looks lovely in small pots and shallow bowls.",
+      "img": "assets/img/echeveria.jpg",
+      "rating": 4.5,
+      "reviews": 167,
+      "inStock": true,
+      "stock": 26,
+      "difficulty": "Easy",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "biweekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Gritty, quick-draining succulent mix.",
+      "temp": "15–28°C · protect from frost and scorching",
+      "humidity": "Low humidity",
+      "fertilizer": "Diluted succulent feed 2–3 times in spring and summer",
+      "repotting": "Every 2 years or when offsets crowd the pot",
+      "pruning": "Remove dried lower leaves; separate offsets to propagate",
+      "size": "Small",
+      "leaf": "Colorful",
+      "purpose": [
+        "Decoration"
+      ],
+      "placement": [
+        "Office",
+        "Living room",
+        "Balcony"
+      ],
+      "tags": [
+        "Pet Friendly",
+        "Low Maintenance",
+        "Beginner Friendly"
+      ],
+      "bestseller": true,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 86,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Stretching in low light",
+        "Rotting from water sitting in the rosette"
+      ],
+      "careId": "echeveria"
+    },
+    {
+      "id": "haworthia",
+      "name": "Zebra Haworthia",
+      "sci": "Haworthiopsis fasciata",
+      "category": "succulents",
+      "collections": [
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 249,
+      "originalPrice": null,
+      "desc": "Compact, striped rosettes that handle low light better than most succulents — great for desks.",
+      "img": "assets/img/haworthia.jpg",
+      "rating": 4.4,
+      "reviews": 121,
+      "inStock": true,
+      "stock": 21,
+      "difficulty": "Easy",
+      "sunlight": [
+        "low",
+        "medium",
+        "bright"
+      ],
+      "water": "biweekly",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Gritty succulent mix with excellent drainage.",
+      "temp": "16–28°C",
+      "humidity": "Low humidity",
+      "fertilizer": "Feed sparingly — twice a year is plenty",
+      "repotting": "Every 2 years or when offsets appear",
+      "pruning": "Remove dry leaves from the base",
+      "size": "Small",
+      "leaf": "Patterned",
+      "purpose": [
+        "Decoration",
+        "Learning"
+      ],
+      "placement": [
+        "Office",
+        "Bedroom",
+        "Living room"
+      ],
+      "tags": [
+        "Pet Friendly",
+        "Low Light",
+        "Low Maintenance"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 72,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Soft leaves from overwatering",
+        "Fading stripes in deep shade"
+      ],
+      "careId": "haworthia"
+    },
+    {
+      "id": "golden-barrel-cactus",
+      "name": "Golden Barrel Cactus",
+      "sci": "Echinocactus grusonii",
+      "category": "succulents",
+      "collections": [
+        "lowmaintenance"
+      ],
+      "kind": "plant",
+      "price": 449,
+      "originalPrice": 529,
+      "desc": "A ribbed globe of golden spines. Sculptural, water-wise and almost comically easy to keep.",
+      "img": "assets/img/golden-barrel-cactus.jpg",
+      "rating": 4.6,
+      "reviews": 133,
+      "inStock": true,
+      "stock": 10,
+      "difficulty": "Easy",
+      "sunlight": [
+        "direct",
+        "bright"
+      ],
+      "water": "low",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Very gritty cactus mix; a terracotta pot helps.",
+      "temp": "18–35°C · keep dry and bright in winter",
+      "humidity": "Low humidity",
+      "fertilizer": "Cactus feed once in spring",
+      "repotting": "Every 3 years — use gloves and tongs",
+      "pruning": "No pruning needed; remove spent flowers if any",
+      "size": "Small",
+      "leaf": "Green",
+      "purpose": [
+        "Decoration"
+      ],
+      "placement": [
+        "Balcony",
+        "Living room",
+        "Office"
+      ],
+      "tags": [
+        "Low Maintenance",
+        "Sun Lover"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 75,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Base rot from excess water",
+        "Spines are sharp — keep away from curious pets and toddlers"
+      ],
+      "careId": "golden-barrel-cactus"
+    },
+    {
+      "id": "tulsi",
+      "name": "Tulsi (Holy Basil)",
+      "sci": "Ocimum tenuiflorum",
+      "category": "medicinal",
+      "collections": [
+        "outdoor"
+      ],
+      "kind": "plant",
+      "price": 149,
+      "originalPrice": 199,
+      "desc": "Aromatic, sacred and useful. Pinch regularly for a bushy plant and a steady supply of leaves.",
+      "img": "assets/img/tulsi.jpg",
+      "rating": 4.8,
+      "reviews": 442,
+      "inStock": true,
+      "stock": 34,
+      "difficulty": "Easy",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "frequent",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Rich, well-draining mix with compost.",
+      "temp": "20–35°C · loves warmth",
+      "humidity": "Tolerates humid summers",
+      "fertilizer": "Compost top-dress monthly; feed lightly",
+      "repotting": "Annual — repot or replant each spring",
+      "pruning": "Pinch flower buds and tips to keep leaves tender",
+      "size": "Small",
+      "leaf": "Green",
+      "purpose": [
+        "Wellness",
+        "Gardening"
+      ],
+      "placement": [
+        "Balcony",
+        "Kitchen",
+        "Outdoor garden"
+      ],
+      "tags": [
+        "Medicinal",
+        "Bestseller",
+        "Sun Lover"
+      ],
+      "bestseller": true,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 94,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Leggy stems without pinching",
+        "Wilting in a small pot on hot days"
+      ],
+      "careId": "tulsi"
+    },
+    {
+      "id": "mint",
+      "name": "Mint",
+      "sci": "Mentha spicata",
+      "category": "medicinal",
+      "collections": [],
+      "kind": "plant",
+      "price": 129,
+      "originalPrice": 159,
+      "desc": "Vigorous, fragrant and endlessly useful in the kitchen. Keep it in its own pot — it spreads.",
+      "img": "assets/img/mint.jpg",
+      "rating": 4.5,
+      "reviews": 208,
+      "inStock": true,
+      "stock": 29,
+      "difficulty": "Easy",
+      "sunlight": [
+        "medium",
+        "bright"
+      ],
+      "water": "frequent",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "caution",
+        "cats": "caution"
+      },
+      "soil": "Moisture-retentive mix with compost.",
+      "temp": "15–28°C",
+      "humidity": "Average to high",
+      "fertilizer": "Light organic feed every 4 weeks",
+      "repotting": "Every year — divide the clump in spring",
+      "pruning": "Harvest tips often to keep growth soft and bushy",
+      "size": "Small",
+      "leaf": "Green",
+      "purpose": [
+        "Gardening",
+        "Wellness"
+      ],
+      "placement": [
+        "Kitchen",
+        "Balcony",
+        "Bathroom"
+      ],
+      "tags": [
+        "Medicinal",
+        "Kitchen Garden"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 77,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Wilting from dry soil",
+        "Rust spots in poor airflow"
+      ],
+      "careId": "mint"
+    },
+    {
+      "id": "rosemary",
+      "name": "Rosemary",
+      "sci": "Salvia rosmarinus",
+      "category": "medicinal",
+      "collections": [
+        "outdoor"
+      ],
+      "kind": "plant",
+      "price": 249,
+      "originalPrice": null,
+      "desc": "A woody, needle-leaved herb that prefers to dry out between waterings. Excellent on sunny balconies.",
+      "img": "assets/img/rosemary.jpg",
+      "rating": 4.4,
+      "reviews": 156,
+      "inStock": true,
+      "stock": 17,
+      "difficulty": "Moderate",
+      "sunlight": [
+        "bright",
+        "direct"
+      ],
+      "water": "weekly",
+      "maintenance": "Medium",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Gritty, free-draining mix; hates soggy roots.",
+      "temp": "15–30°C · good airflow essential",
+      "humidity": "Low humidity",
+      "fertilizer": "Light organic feed twice in the growing season",
+      "repotting": "Every 2 years, in spring",
+      "pruning": "Trim after flowering to keep it bushy; never cut into old wood",
+      "size": "Medium",
+      "leaf": "Green",
+      "purpose": [
+        "Gardening",
+        "Wellness"
+      ],
+      "placement": [
+        "Balcony",
+        "Outdoor garden",
+        "Kitchen"
+      ],
+      "tags": [
+        "Medicinal",
+        "Sun Lover",
+        "Pet Friendly"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 70,
+      "organic": "Organic-inspired",
+      "problems": [
+        "Powdery mildew in still, humid air",
+        "Root rot in heavy soil"
+      ],
+      "careId": "rosemary"
+    },
+    {
+      "id": "vermicompost",
+      "name": "Organic Vermicompost 5 kg",
+      "sci": "Earthworm castings · soil amendment",
+      "category": "essentials",
+      "collections": [],
+      "kind": "essential",
+      "price": 299,
+      "originalPrice": 399,
+      "desc": "Rich, crumbly worm castings to feed soil life. Mix into potting soil or top-dress established plants.",
+      "img": "assets/img/vermicompost.jpg",
+      "rating": 4.7,
+      "reviews": 512,
+      "inStock": true,
+      "stock": 60,
+      "difficulty": "Easy",
+      "sunlight": [],
+      "water": "",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Use 20–30% vermicompost in potting mixes.",
+      "temp": "Store cool and dry, out of direct sun",
+      "humidity": "Keep sealed to retain moisture",
+      "fertilizer": "Apply monthly during the growing season",
+      "repotting": "",
+      "pruning": "",
+      "size": "—",
+      "leaf": "—",
+      "purpose": [
+        "Gardening"
+      ],
+      "placement": [],
+      "tags": [
+        "Organic-Inspired",
+        "Soil Health"
+      ],
+      "bestseller": true,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 89,
+      "organic": "Naturally formulated",
+      "problems": [],
+      "careId": null
+    },
+    {
+      "id": "neem-oil",
+      "name": "Neem Oil Concentrate 250 ml",
+      "sci": "Azadirachta indica · plant care",
+      "category": "essentials",
+      "collections": [],
+      "kind": "essential",
+      "price": 349,
+      "originalPrice": null,
+      "desc": "A traditional botanical spray for common garden pests. Always dilute and patch-test before spraying.",
+      "img": "assets/img/neem-oil.jpg",
+      "rating": 4.6,
+      "reviews": 298,
+      "inStock": true,
+      "stock": 42,
+      "difficulty": "Easy",
+      "sunlight": [],
+      "water": "",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "caution",
+        "cats": "caution"
+      },
+      "soil": "",
+      "temp": "Store away from direct sunlight",
+      "humidity": "Keep the bottle sealed",
+      "fertilizer": "Spray at dusk to avoid leaf burn",
+      "repotting": "",
+      "pruning": "",
+      "size": "—",
+      "leaf": "—",
+      "purpose": [
+        "Gardening"
+      ],
+      "placement": [],
+      "tags": [
+        "Organic-Inspired",
+        "Pest Care"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 73,
+      "organic": "Naturally formulated",
+      "problems": [],
+      "careId": null
+    },
+    {
+      "id": "cocopeat",
+      "name": "Cocopeat Block 5 kg",
+      "sci": "Coir pith · potting medium",
+      "category": "essentials",
+      "collections": [],
+      "kind": "essential",
+      "price": 199,
+      "originalPrice": 249,
+      "desc": "A renewable, peat-free base for potting mixes. Expands to roughly 70 litres when soaked.",
+      "img": "assets/img/cocopeat.jpg",
+      "rating": 4.5,
+      "reviews": 341,
+      "inStock": true,
+      "stock": 55,
+      "difficulty": "Easy",
+      "sunlight": [],
+      "water": "",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "Blend with compost and grit for a balanced mix.",
+      "temp": "Store dry until use",
+      "humidity": "Rehydrate with clean water before planting",
+      "fertilizer": "Cocopeat holds water, not nutrients — feed regularly",
+      "repotting": "",
+      "pruning": "",
+      "size": "—",
+      "leaf": "—",
+      "purpose": [
+        "Gardening"
+      ],
+      "placement": [],
+      "tags": [
+        "Peat-Free",
+        "Organic-Inspired"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 79,
+      "organic": "Naturally formulated",
+      "problems": [],
+      "careId": null
+    },
+    {
+      "id": "fertilizer",
+      "name": "Organic Plant Fertilizer 500 ml",
+      "sci": "Plant-based liquid feed",
+      "category": "essentials",
+      "collections": [],
+      "kind": "essential",
+      "price": 399,
+      "originalPrice": 479,
+      "desc": "A gentle, naturally formulated liquid feed for houseplants and herbs during the growing season.",
+      "img": "assets/img/fertilizer.jpg",
+      "rating": 4.7,
+      "reviews": 276,
+      "inStock": true,
+      "stock": 38,
+      "difficulty": "Easy",
+      "sunlight": [],
+      "water": "",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "caution",
+        "cats": "caution"
+      },
+      "soil": "",
+      "temp": "Store at room temperature",
+      "humidity": "Close the cap after use",
+      "fertilizer": "Dilute per label — less is more with houseplants",
+      "repotting": "",
+      "pruning": "",
+      "size": "—",
+      "leaf": "—",
+      "purpose": [
+        "Gardening"
+      ],
+      "placement": [],
+      "tags": [
+        "Organic-Inspired",
+        "Plant Food"
+      ],
+      "bestseller": false,
+      "featured": true,
+      "newArrival": false,
+      "popularity": 81,
+      "organic": "Naturally formulated",
+      "problems": [],
+      "careId": null
+    },
+    {
+      "id": "toolkit",
+      "name": "Gardening Tool Kit",
+      "sci": "Trowel · fork · snips",
+      "category": "essentials",
+      "collections": [],
+      "kind": "essential",
+      "price": 899,
+      "originalPrice": 1199,
+      "desc": "Three solid-handled hand tools for repotting, loosening soil and light pruning. Built to last.",
+      "img": "assets/img/toolkit.jpg",
+      "rating": 4.8,
+      "reviews": 189,
+      "inStock": true,
+      "stock": 15,
+      "difficulty": "Easy",
+      "sunlight": [],
+      "water": "",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "",
+      "temp": "Store dry; oil wooden handles occasionally",
+      "humidity": "Dry after use to prevent rust",
+      "fertilizer": "",
+      "repotting": "",
+      "pruning": "Snips are ideal for soft stems and spent blooms",
+      "size": "—",
+      "leaf": "—",
+      "purpose": [
+        "Gardening"
+      ],
+      "placement": [],
+      "tags": [
+        "Bestseller",
+        "Gift Idea"
+      ],
+      "bestseller": true,
+      "featured": false,
+      "newArrival": false,
+      "popularity": 85,
+      "organic": null,
+      "problems": [],
+      "careId": null
+    },
+    {
+      "id": "pots",
+      "name": "Terracotta Pot Set (3)",
+      "sci": "Breathable clay pots with saucers",
+      "category": "essentials",
+      "collections": [],
+      "kind": "essential",
+      "price": 499,
+      "originalPrice": 649,
+      "desc": "Classic terracotta in three sizes. Porous walls help roots breathe and reduce overwatering risk.",
+      "img": "assets/img/pots.jpg",
+      "rating": 4.6,
+      "reviews": 231,
+      "inStock": true,
+      "stock": 20,
+      "difficulty": "Easy",
+      "sunlight": [],
+      "water": "",
+      "maintenance": "Low",
+      "pet": {
+        "dogs": "safe",
+        "cats": "safe"
+      },
+      "soil": "",
+      "temp": "Soak new pots before first use",
+      "humidity": "Terracotta dries faster — check soil more often",
+      "fertilizer": "",
+      "repotting": "Choose a pot 2–3 cm wider than the current one",
+      "pruning": "",
+      "size": "—",
+      "leaf": "—",
+      "purpose": [
+        "Gardening",
+        "Decoration"
+      ],
+      "placement": [],
+      "tags": [
+        "Beginner Friendly"
+      ],
+      "bestseller": false,
+      "featured": false,
+      "newArrival": true,
+      "popularity": 74,
+      "organic": null,
+      "problems": [],
+      "careId": null
+    }
+  ]
+}

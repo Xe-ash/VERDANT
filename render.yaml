@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: verdant-plant-nursery
+    runtime: node
+    plan: free
+    buildCommand: echo "no build step — zero dependencies"
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: NODE_VERSION
+        value: 20
+      - key: VERDANT_DATA_DIR
+        value: /var/data
+    disk:
+      name: verdant-data
+      mountPath: /var/data
+      sizeGB: 1

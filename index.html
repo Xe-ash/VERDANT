@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verdant — Organic Plant Nursery &amp; Houseplant Care</title>
+<meta name="description" content="Verdant is an organic plant nursery store: shop houseplants, succulents, herbs and gardening essentials, get personalised plant recommendations and keep your plants thriving with care guides, reminders and a personal plant dashboard.">
+<meta name="theme-color" content="#1B4332">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231B4332'/%3E%3Cpath d='M16 25c0-7 3-11 9-13-1 7-3 11-9 13Zm0 0C16 18 13 14 7 12c1 7 3 11 9 13Z' fill='%2395D5B2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================================================
+     ICON SPRITE (inline SVG, no external icon library)
+     ============================================================ -->
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 4 8 4 16c0 2 1 4 1 4M20 4c0 10-4 16-12 16M20 4c-2 6-6 10-12 12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.55L21 8H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.65 12 20 12 20Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-heart-fill" viewBox="0 0 24 24"><path d="M12 20s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.65 12 20 12 20Z" fill="currentColor"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 10.4A6 6 0 0 1 6 13.4C6 9.4 12 3 12 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-soil" viewBox="0 0 24 24"><path d="M3 17h18M5 17c0-4 3-7 7-7s7 3 7 7M12 10V4M12 4l-3 3M12 4l3 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="7" cy="9" r="1.8" fill="currentColor"/><circle cx="12" cy="6.8" r="1.8" fill="currentColor"/><circle cx="17" cy="9" r="1.8" fill="currentColor"/><path d="M12 10c3 0 5 2.5 5 5s-2 4-5 4-5-1.5-5-4 2-5 5-5Z" fill="currentColor"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h10v9H3zM13 10h4l3 3v3h-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="18" r="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.6 2.5 5.3 5.8.7-4.3 4 1.1 5.8-5.1-2.9-5.1 2.9 1.1-5.8-4.3-4 5.8-.7L12 3.6Z" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 4 2.8 20h18.4L12 4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 10v4.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="17.2" r="1.05" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L15 11.5l4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4 5.2 2 2 0 0 1 6 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3.8 7 8.2 6 8.2-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 3v4M16 3v4M3.5 10h17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6.5" cy="17.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="17.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.5 15.5 18 4M15.5 15.5 6 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-pot" viewBox="0 0 24 24"><path d="M6 9h12l-1.4 9.2a2 2 0 0 1-2 1.8H9.4a2 2 0 0 1-2-1.8L6 9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M12 9c0-3 2-5 5-5-.2 3-2.2 5-5 5Zm0 0C12 6 10 4 7 4c.2 3 2.2 5 5 5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="4.5" ry="6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7V4M9 8 6.5 5.5M15 8l2.5-2.5M7.5 11H4M16.5 11H20M7.5 16H4.5M16.5 16h3M9.5 19l-2 2M14.5 19l2 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21V5.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 7h8M8 11h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4.5 20c1.4-3.6 4.1-5.2 7.5-5.2s6.1 1.6 7.5 5.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m13.5 6.5 4 4" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z" fill="currentColor"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h2.5V4.5H14c-2.5 0-4 1.6-4 4.2V11H7.5v3.5H10V21h3.5v-6.5H16l.5-3.5h-3V9c0-.7.3-1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m10.5 9.5 5 2.5-5 2.5v-5Z" fill="currentColor"/></symbol>
+  <symbol id="i-pinterest" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M10 20c.7-2 1.3-4.4 1.6-6M10.2 13.4c-.3-1.6.7-3.4 2.6-3.4 1.5 0 2.3 1 2.3 2.4 0 1.9-1 3.6-2.6 3.6-.9 0-1.5-.7-1.2-1.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10" width="15" height="10.5" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7.8a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="1.1" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ============================================================
+     ANNOUNCEMENT BAR
+     ============================================================ -->
+<div class="announcement" role="region" aria-label="Store announcement">
+  <div class="announcement__inner container">
+    <p class="announcement__item"><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg> Free delivery on eligible orders over ₹999</p>
+    <span class="announcement__dot" aria-hidden="true"></span>
+    <p class="announcement__item"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg> 100% Organic Gardening Essentials</p>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER / NAVIGATION
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="container header__inner">
+    <a class="brand" href="#/home" aria-label="Verdant Organic Plant Nursery — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 27c0-8 3.4-12.6 10-14.8C25 20 22.7 24.6 16 27Z" fill="currentColor" opacity=".9"/><path d="M16 27C16 19 12.6 14.4 6 12.2 7 20 9.3 24.6 16 27Z" fill="currentColor" opacity=".65"/><path d="M16 27c0-6 .6-10.6 2-15" fill="none" stroke="#95D5B2" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand__text">
+        <span class="brand__name">Verdant</span>
+        <span class="brand__tag">Organic Plant Nursery</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#/home" data-nav="home">Home</a></li>
+        <li><a class="nav__link" href="#/shop" data-nav="shop">Shop Plants</a></li>
+        <li><a class="nav__link" href="#/categories" data-nav="categories">Categories</a></li>
+        <li><a class="nav__link" href="#/care" data-nav="care">Plant Care</a></li>
+        <li><a class="nav__link nav__link--accent" href="#/recommender" data-nav="recommender">Recommender</a></li>
+        <li><a class="nav__link" href="#/about" data-nav="about">About</a></li>
+        <li><a class="nav__link" href="#/contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" id="searchToggle" type="button" aria-expanded="false" aria-controls="headerSearch" aria-label="Search plants and products">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+      </button>
+      <a class="icon-btn" href="#/wishlist" data-nav="wishlist" aria-label="Wishlist">
+        <svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>
+        <span class="count-badge" id="wishlistCount" data-count="wishlist" hidden>0</span>
+      </a>
+      <a class="icon-btn" href="#/cart" data-nav="cart" aria-label="Shopping cart">
+        <svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg>
+        <span class="count-badge" id="cartCount" data-count="cart" hidden>0</span>
+      </a>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="header-search" id="headerSearch" hidden>
+    <form class="header-search__form container" id="headerSearchForm" role="search">
+      <label class="sr-only" for="headerSearchInput">Search plants, scientific names, categories or products</label>
+      <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+      <input type="search" id="headerSearchInput" name="q" placeholder="Search plants, scientific names, categories…" autocomplete="off">
+      <button class="btn btn--primary btn--sm" type="submit">Search</button>
+      <button class="icon-btn header-search__close" type="button" id="searchClose" aria-label="Close search">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </form>
+    <p class="header-search__hint container">Try “Snake Plant”, “Ficus elastica”, “low maintenance” or “succulent”.</p>
+  </div>
+</header>
+
+<div class="scrim" id="navScrim" hidden></div>
+
+<main id="main" tabindex="-1">
+
+<!-- ============================================================
+     VIEW: HOME
+     ============================================================ -->
+<section class="view" id="view-home" data-view="home" aria-labelledby="homeTitle">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg> Nursery-grown · Expert guided</p>
+        <h1 class="hero__title" id="homeTitle">Bring <em>Nature</em> Home.</h1>
+        <p class="hero__text">Discover beautiful houseplants, organic gardening essentials, and personalized plant-care guidance for a greener lifestyle.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#/shop">Explore Plants <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+          <a class="btn btn--accent" href="#/recommender"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg> Find My Perfect Plant</a>
+          <a class="btn btn--ghost" href="#/care">Learn Plant Care</a>
+        </div>
+        <ul class="hero__trust" aria-label="What we offer">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg><span>Healthy Plants</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><span>Organic Products</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg><span>Expert Care Guidance</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg><span>Eco-Friendly Packaging</span></li>
+        </ul>
+      </div>
+      <div class="hero__media">
+        <figure class="hero__figure">
+          <img src="assets/img/hero.jpg" alt="Sunlight filling a greenhouse filled with healthy green plants" width="1500" height="1000" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="float-card float-card--match">
+          <span class="float-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+          <div>
+            <p class="float-card__label">Recommended for you</p>
+            <p class="float-card__title">Peace Lily · 96% match</p>
+            <div class="meter meter--sm"><span style="width:96%"></span></div>
+          </div>
+        </div>
+        <div class="float-card float-card--care">
+          <span class="float-card__icon float-card__icon--accent"><svg class="icon" aria-hidden="true"><use href="#i-drop"></use></svg></span>
+          <div>
+            <p class="float-card__label">Care reminder</p>
+            <p class="float-card__title">Check Monstera soil today</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop by category -->
+  <section class="section" aria-labelledby="catTitle">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Curated collections</p>
+          <h2 class="section__title" id="catTitle">Shop by category</h2>
+          <p class="section__sub">Eight thoughtful collections — from easy-care greens to organic soil and tools.</p>
+        </div>
+        <a class="link-arrow" href="#/categories">All categories <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </header>
+      <div class="category-grid" id="homeCategoryGrid"><!-- injected --></div>
+    </div>
+  </section>
+
+  <!-- Best sellers -->
+  <section class="section section--beige" aria-labelledby="bestTitle">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Loved by plant parents</p>
+          <h2 class="section__title" id="bestTitle">Best-selling plants</h2>
+          <p class="section__sub">Customer favourites, nursery-picked and ready for your home.</p>
+        </div>
+        <a class="link-arrow" href="#/shop">View all plants <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </header>
+      <div class="product-grid" id="bestsellerGrid"><!-- injected --></div>
+    </div>
+  </section>
+
+  <!-- Recommender promo -->
+  <section class="section" aria-labelledby="recoTitle">
+    <div class="container">
+      <div class="reco-promo">
+        <div class="reco-promo__media">
+          <img src="assets/img/plant-shelf.jpg" alt="A bright room lined with a collection of leafy houseplants" width="640" height="640" loading="lazy" decoding="async">
+          <div class="reco-promo__score" aria-hidden="true">
+            <span class="reco-promo__score-num">94<span>%</span></span>
+            <span class="reco-promo__score-label">Match score</span>
+          </div>
+        </div>
+        <div class="reco-promo__body">
+          <p class="eyebrow eyebrow--light"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg> Smart plant recommender</p>
+          <h2 class="section__title" id="recoTitle">Not sure which plant is right for you?</h2>
+          <p class="reco-promo__text">Answer a few simple questions about your room, sunlight, lifestyle, and plant-care experience. Our smart plant recommender will help you discover plants that suit your environment.</p>
+          <ol class="reco-steps">
+            <li><span>1</span> Tell us about your space</li>
+            <li><span>2</span> We match light, water &amp; pets</li>
+            <li><span>3</span> Get your top plant matches</li>
+          </ol>
+          <div class="reco-promo__actions">
+            <a class="btn btn--accent" href="#/recommender"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg> Find My Perfect Plant</a>
+            <p class="reco-promo__note">Takes about 2 minutes · No account needed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="section section--beige" aria-labelledby="whyTitle">
+    <div class="container">
+      <header class="section__head section__head--center">
+        <div>
+          <p class="eyebrow">The Verdant difference</p>
+          <h2 class="section__title" id="whyTitle">Why plant parents choose us</h2>
+          <p class="section__sub">Considered plants, honest products and guidance that actually helps.</p>
+        </div>
+      </header>
+      <div class="feature-grid" id="featureGrid">
+        <article class="feature-card">
+          <span class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg></span>
+          <h3>Responsibly sourced plants</h3>
+          <p>Our plants are raised in partner nurseries with care for soil health and seasonal growing cycles.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-soil"></use></svg></span>
+          <h3>Organic gardening essentials</h3>
+          <p>Naturally formulated compost, neem oil and fertilizers that are gentle on your home and garden.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-pot"></use></svg></span>
+          <h3>Carefully packed plants</h3>
+          <p>Roots secured, leaves cushioned and pots protected so your plant arrives ready to grow.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg></span>
+          <h3>Beginner-friendly recommendations</h3>
+          <p>Our recommender matches plants to your light, watering habits and experience level.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span>
+          <h3>Detailed care instructions</h3>
+          <p>Every plant includes watering, light, soil and troubleshooting guidance written in plain language.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg></span>
+          <h3>Eco-conscious packaging</h3>
+          <p>Recyclable cartons and plastic-free cushioning wherever we can — kinder to the planet you grow on.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plant care education -->
+  <section class="section" aria-labelledby="eduTitle">
+    <div class="container">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Plant care, made simple</p>
+          <h2 class="section__title" id="eduTitle">Learn the essentials</h2>
+          <p class="section__sub">Short, practical guides that answer the questions every plant parent has.</p>
+        </div>
+        <a class="link-arrow" href="#/care">Plant care centre <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </header>
+      <div class="article-grid">
+        <article class="article-card">
+          <div class="article-card__media">
+            <img src="assets/img/watering.jpg" alt="A watering can being used to water houseplants in a bright room" width="640" height="640" loading="lazy" decoding="async">
+          </div>
+          <div class="article-card__body">
+            <p class="pill pill--soft">Watering</p>
+            <h3>How to water indoor plants</h3>
+            <p>Why a schedule is a starting point, not a rule — and how to test soil moisture before you pour.</p>
+            <button class="btn btn--ghost btn--sm" type="button" data-article="watering">Read More <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__media">
+            <img src="assets/img/chair-plant.jpg" alt="A houseplant on a wooden stand beside a bright window" width="640" height="640" loading="lazy" decoding="async">
+          </div>
+          <div class="article-card__body">
+            <p class="pill pill--soft">Sunlight</p>
+            <h3>Understanding sunlight requirements</h3>
+            <p>Decode “bright indirect light”, read the light in your room, and find plants that suit it.</p>
+            <button class="btn btn--ghost btn--sm" type="button" data-article="sunlight">Read More <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="article-card__media">
+            <img src="assets/img/leaf-problem.jpg" alt="A gardener inspecting a yellowing leaf on a houseplant" width="640" height="640" loading="lazy" decoding="async">
+          </div>
+          <div class="article-card__body">
+            <p class="pill pill--soft">Troubleshooting</p>
+            <h3>Common houseplant problems</h3>
+            <p>Yellow leaves, crispy tips and pests — how to look closely and respond calmly.</p>
+            <button class="btn btn--ghost btn--sm" type="button" data-article="problems">Read More <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--green" aria-labelledby="testiTitle">
+    <div class="container">
+      <header class="section__head section__head--center">
+        <div>
+          <p class="eyebrow eyebrow--light">Plant community</p>
+          <h2 class="section__title" id="testiTitle">Stories from our plant community</h2>
+          <p class="section__sub">Sample reviews shown to demonstrate the store experience.</p>
+        </div>
+      </header>
+      <div class="testimonial-grid" id="testimonialGrid"><!-- injected --></div>
+      <p class="disclaimer-inline"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg> These are demonstration reviews written for this sample store — not verified customer feedback.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" aria-labelledby="newsTitle">
+    <div class="container">
+      <div class="newsletter">
+        <div class="newsletter__body">
+          <p class="eyebrow">Newsletter</p>
+          <h2 class="section__title" id="newsTitle">Grow With Us.</h2>
+          <p>Get plant-care tips, gardening inspiration, and updates about new arrivals.</p>
+          <form class="newsletter__form" id="newsletterForm" novalidate>
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <div class="field-row">
+              <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" autocomplete="email" aria-describedby="newsletterMsg">
+              <button class="btn btn--primary" type="submit">Subscribe</button>
+            </div>
+            <p class="form-msg" id="newsletterMsg" role="status" aria-live="polite"></p>
+          </form>
+          <p class="newsletter__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> Demo form — subscriptions are saved only in this browser.</p>
+        </div>
+        <div class="newsletter__art" aria-hidden="true">
+          <svg viewBox="0 0 240 200" class="newsletter__illo">
+            <circle cx="150" cy="90" r="70" fill="#95D5B2" opacity=".35"/>
+            <path d="M120 168c0-46 20-74 60-86-6 42-22 72-60 86Z" fill="#95D5B2" opacity=".9"/>
+            <path d="M120 168c0-34-18-58-48-66 4 32 16 54 48 66Z" fill="#DDA15E" opacity=".55"/>
+            <path d="M120 168c0-30 1-54 6-76" stroke="#1B4332" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <rect x="96" y="160" width="48" height="24" rx="6" fill="#1B4332" opacity=".15"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================================================
+     VIEW: SHOP
+     ============================================================ -->
+<section class="view" id="view-shop" data-view="shop" aria-labelledby="shopTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Shop</span>
+      </nav>
+      <h1 class="page-title" id="shopTitle">Shop plants &amp; gardening essentials</h1>
+      <p class="page-sub">Browse nursery-grown plants, organic soil and tools. Use filters to match your space, schedule and experience — or <a href="#/recommender">let the recommender choose for you</a>.</p>
+    </div>
+  </div>
+
+  <div class="container shop-layout">
+    <aside class="filters" aria-label="Product filters">
+      <div class="filters__head">
+        <h2 class="filters__title"><svg class="icon" aria-hidden="true"><use href="#i-filter"></use></svg> Filters</h2>
+        <button class="btn btn--ghost btn--xs" type="button" id="clearFilters">Clear all</button>
+      </div>
+
+      <form id="filterForm" class="filters__form">
+        <fieldset class="filter-group">
+          <legend>Search</legend>
+          <div class="input-icon">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <label class="sr-only" for="shopSearch">Search products</label>
+            <input type="search" id="shopSearch" placeholder="Name, species, category…" autocomplete="off">
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Category</legend>
+          <div class="check-list" id="categoryFilters"><!-- injected --></div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Price range</legend>
+          <div class="range-row">
+            <output id="priceMinOut" for="priceMin">₹0</output>
+            <span aria-hidden="true">–</span>
+            <output id="priceMaxOut" for="priceMax">₹2000</output>
+          </div>
+          <label class="sr-only" for="priceMin">Minimum price</label>
+          <input type="range" id="priceMin" min="0" max="2000" step="50" value="0">
+          <label class="sr-only" for="priceMax">Maximum price</label>
+          <input type="range" id="priceMax" min="0" max="2000" step="50" value="2000">
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Maintenance</legend>
+          <div class="chip-set" data-filter="maintenance">
+            <label class="chip-check"><input type="checkbox" value="Low"><span>Low</span></label>
+            <label class="chip-check"><input type="checkbox" value="Medium"><span>Medium</span></label>
+            <label class="chip-check"><input type="checkbox" value="High"><span>High</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Sunlight</legend>
+          <div class="chip-set chip-set--wrap" data-filter="sun">
+            <label class="chip-check"><input type="checkbox" value="very-low"><span>Very low</span></label>
+            <label class="chip-check"><input type="checkbox" value="low"><span>Low</span></label>
+            <label class="chip-check"><input type="checkbox" value="medium"><span>Indirect</span></label>
+            <label class="chip-check"><input type="checkbox" value="bright"><span>Bright</span></label>
+            <label class="chip-check"><input type="checkbox" value="direct"><span>Direct</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Difficulty</legend>
+          <div class="chip-set" data-filter="difficulty">
+            <label class="chip-check"><input type="checkbox" value="Easy"><span>Easy</span></label>
+            <label class="chip-check"><input type="checkbox" value="Moderate"><span>Moderate</span></label>
+            <label class="chip-check"><input type="checkbox" value="Challenging"><span>Hard</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Availability</legend>
+          <label class="switch-row"><input type="checkbox" id="inStockOnly"><span>In stock only</span></label>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Minimum rating</legend>
+          <div class="rating-filter" id="ratingFilter">
+            <label><input type="radio" name="rating" value="0" checked><span>Any</span></label>
+            <label><input type="radio" name="rating" value="3"><span>3★ &amp; up</span></label>
+            <label><input type="radio" name="rating" value="4"><span>4★ &amp; up</span></label>
+            <label><input type="radio" name="rating" value="4.5"><span>4.5★ &amp; up</span></label>
+          </div>
+        </fieldset>
+      </form>
+    </aside>
+
+    <div class="shop-main">
+      <div class="shop-toolbar">
+        <div class="shop-toolbar__left">
+          <button class="btn btn--outline btn--sm filters-toggle" type="button" id="filtersToggle" aria-expanded="false" aria-controls="filterPanel">
+            <svg class="icon" aria-hidden="true"><use href="#i-filter"></use></svg> Filters <span class="filters-toggle__count" id="activeFilterCount" hidden>0</span>
+          </button>
+          <p class="results-count" id="resultsCount" role="status" aria-live="polite">Showing all products</p>
+        </div>
+        <div class="shop-toolbar__right">
+          <label class="select-label" for="sortSelect">Sort by</label>
+          <select id="sortSelect" class="select">
+            <option value="recommended">Recommended</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="new">New Arrivals</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="active-filters" id="activeFilters" aria-label="Active filters"></div>
+      <div class="product-grid" id="shopGrid"></div>
+      <div class="empty-state" id="shopEmpty" hidden>
+        <span class="empty-state__icon"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></span>
+        <h2>No plants match these filters</h2>
+        <p>Try removing a filter or searching a different name. Scientific names work too — for example “Ficus elastica”.</p>
+        <div class="empty-state__actions">
+          <button class="btn btn--primary" type="button" id="resetSearchBtn">Reset filters</button>
+          <a class="btn btn--outline" href="#/recommender">Find my perfect plant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: CATEGORIES
+     ============================================================ -->
+<section class="view" id="view-categories" data-view="categories" aria-labelledby="categoriesTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Categories</span></nav>
+      <h1 class="page-title" id="categoriesTitle">Plant categories</h1>
+      <p class="page-sub">Eight collections organised by light, care needs and purpose. Pick a collection to filter the shop.</p>
+    </div>
+  </div>
+  <div class="container section">
+    <div class="category-grid category-grid--large" id="allCategoryGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: PLANT CARE
+     ============================================================ -->
+<section class="view" id="view-care" data-view="care" aria-labelledby="careTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Plant Care</span></nav>
+      <h1 class="page-title" id="careTitle">Plant care centre</h1>
+      <p class="page-sub">Species-specific guides, care fundamentals, a symptom checker and a personal dashboard to keep every plant on track.</p>
+      <div class="page-head__actions">
+        <a class="btn btn--primary btn--sm" href="#/dashboard"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"></use></svg> My plant dashboard</a>
+        <a class="btn btn--outline btn--sm" href="#problemChecker"><svg class="icon" aria-hidden="true"><use href="#i-bug"></use></svg> Diagnose a plant problem</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Care topics -->
+    <section class="section section--tight" aria-labelledby="topicsTitle">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Care fundamentals</p>
+          <h2 class="section__title" id="topicsTitle">Start with the basics</h2>
+          <p class="section__sub">Eight topics that cover most of what a houseplant needs.</p>
+        </div>
+      </header>
+      <div class="topic-grid" id="careTopicGrid"></div>
+    </section>
+
+    <!-- Care guides + search -->
+    <section class="section section--tight" aria-labelledby="guidesTitle">
+      <header class="section__head">
+        <div>
+          <p class="eyebrow">Species library</p>
+          <h2 class="section__title" id="guidesTitle">Plant care guides</h2>
+          <p class="section__sub">Detailed, species-specific care for the plants in our shop.</p>
+        </div>
+      </header>
+      <div class="care-search">
+        <div class="input-icon input-icon--lg">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          <label class="sr-only" for="careSearch">Search plant care guides</label>
+          <input type="search" id="careSearch" placeholder="Search a plant — e.g. Monstera, snake plant, tulsi…" autocomplete="off">
+        </div>
+        <p class="care-search__count" id="careSearchCount" role="status" aria-live="polite"></p>
+      </div>
+      <div class="care-grid" id="careGuideGrid"></div>
+      <div class="empty-state empty-state--sm" id="careEmpty" hidden>
+        <span class="empty-state__icon"><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span>
+        <h3>No care guide found</h3>
+        <p>We couldn’t find that plant. Try a common name such as “spider plant” or a scientific name like “Ficus”.</p>
+        <button class="btn btn--outline" type="button" id="careResetBtn">Show all guides</button>
+      </div>
+    </section>
+
+    <!-- Problem identifier -->
+    <section class="section section--tight" id="problemChecker" aria-labelledby="problemTitle">
+      <div class="problem-panel">
+        <header class="problem-panel__head">
+          <div>
+            <p class="eyebrow">Symptom checker</p>
+            <h2 class="section__title" id="problemTitle">What is your plant telling you?</h2>
+            <p class="section__sub">Select every symptom you can see. You’ll get possible causes, what to inspect, and gentle next steps.</p>
+          </div>
+          <span class="problem-panel__icon" aria-hidden="true"><svg class="icon"><use href="#i-bug"></use></svg></span>
+        </header>
+
+        <fieldset class="symptom-fieldset">
+          <legend class="sr-only">Select symptoms</legend>
+          <div class="symptom-grid" id="symptomGrid"></div>
+        </fieldset>
+
+        <div class="problem-actions">
+          <button class="btn btn--primary" type="button" id="checkSymptomsBtn"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg> Show possible causes</button>
+          <button class="btn btn--ghost" type="button" id="resetSymptomsBtn">Reset symptoms</button>
+        </div>
+
+        <div class="problem-results" id="problemResults" aria-live="polite"></div>
+
+        <p class="disclaimer-box"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg> <strong>Educational guidance only.</strong> Symptoms can have several causes at once. This tool offers possibilities to investigate — it is not a diagnosis. For serious infestations or plant health advice, consult a qualified horticulturist.</p>
+      </div>
+    </section>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: RECOMMENDER
+     ============================================================ -->
+<section class="view" id="view-recommender" data-view="recommender" aria-labelledby="recoPageTitle" hidden>
+  <div class="page-head page-head--reco">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Recommender</span></nav>
+      <h1 class="page-title" id="recoPageTitle">Let’s find your perfect plant</h1>
+      <p class="page-sub">Answer a few questions and we’ll match you with plants suited to your light, routine, budget and household.</p>
+    </div>
+  </div>
+
+  <div class="container reco-shell">
+    <div class="reco-progress">
+      <div class="reco-progress__bar"><span id="recoProgressBar" style="width:0%"></span></div>
+      <p class="reco-progress__label" id="recoProgressLabel">Welcome · 10 quick questions</p>
+    </div>
+
+    <div class="reco-card" id="recoCard">
+      <!-- Rendered by script.js -->
+      <div class="reco-loading">Loading your questionnaire…</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: ABOUT
+     ============================================================ -->
+<section class="view" id="view-about" data-view="about" aria-labelledby="aboutTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">About</span></nav>
+      <h1 class="page-title" id="aboutTitle">About Verdant</h1>
+      <p class="page-sub">An organic plant nursery built around one idea: plant ownership should feel simple, sustainable and genuinely supported.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <section class="about-story">
+      <div class="about-story__body">
+        <p class="eyebrow">Our story</p>
+        <h2 class="section__title">Grown from a simple frustration</h2>
+        <p>Verdant began as an organic plant nursery for people who love the idea of a greener home but keep losing plants to unclear advice. Too often, a beautiful plant arrives with a single care card — and then the questions start: how much light, how often to water, why are the leaves turning yellow?</p>
+        <p>So we built something different. Verdant pairs nursery-grown plants and organic gardening essentials with a plant recommender that matches plants to real rooms and real routines, plus care guides and a personal dashboard that keeps track of watering and fertilising.</p>
+        <p>This website is a demonstration store built with HTML, CSS and vanilla JavaScript, with a Node.js backend. It shows how an organic nursery could support customers end to end — from choosing a plant to keeping it thriving. Orders, messages and newsletter sign-ups are saved on the server for the nursery administrator to review.</p>
+        <div class="about-story__stats">
+          <div><strong>28</strong><span>Products in the demo catalogue</span></div>
+          <div><strong>22</strong><span>Species care guides</span></div>
+          <div><strong>8</strong><span>Care topics &amp; categories</span></div>
+        </div>
+      </div>
+      <div class="about-story__media">
+        <img src="assets/img/family-gardening.jpg" alt="An adult and child reading together outdoors in warm evening light" width="640" height="640" loading="lazy" decoding="async">
+        <div class="about-story__badge">
+          <svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg>
+          <div><strong>Grow Naturally.</strong><span>Live Beautifully.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission-grid" aria-label="Mission and vision">
+      <article class="mission-card">
+        <span class="mission-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg></span>
+        <h2>Our mission</h2>
+        <p>To encourage greener homes and healthier lifestyles through quality plants, organic gardening products, and simple plant-care education.</p>
+      </article>
+      <article class="mission-card mission-card--accent">
+        <span class="mission-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-sun"></use></svg></span>
+        <h2>Our vision</h2>
+        <p>To make sustainable plant ownership a natural part of everyday life.</p>
+      </article>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="valuesTitle">
+      <header class="section__head section__head--center">
+        <div>
+          <p class="eyebrow">What guides us</p>
+          <h2 class="section__title" id="valuesTitle">Our values</h2>
+        </div>
+      </header>
+      <div class="value-grid" id="valueGrid">
+        <article class="value-card"><h3>Sustainability</h3><p>We favour practices, materials and packaging that reduce waste and protect soil health.</p></article>
+        <article class="value-card"><h3>Nature conservation</h3><p>Responsibly sourced plants and a strong preference for peat-free, plastic-light growing media.</p></article>
+        <article class="value-card"><h3>Responsible gardening</h3><p>Clear, honest guidance — including when a plant is simply not right for a room or a household.</p></article>
+        <article class="value-card"><h3>Customer education</h3><p>Every product page explains light, water and soil needs in plain language.</p></article>
+        <article class="value-card"><h3>Quality</h3><p>Healthy plants and naturally formulated essentials that we would use in our own homes.</p></article>
+        <article class="value-card"><h3>Environmental awareness</h3><p>Honest labelling: we only describe a product as certified organic when that certification is verifiable.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-label="Try the recommender">
+      <div>
+        <p class="eyebrow eyebrow--light">Ready when you are</p>
+        <h2>Find the plant that fits your home.</h2>
+        <p>Ten short questions about light, routine, budget and pets.</p>
+      </div>
+      <a class="btn btn--accent" href="#/recommender"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"></use></svg> Find My Perfect Plant</a>
+    </section>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: CONTACT
+     ============================================================ -->
+<section class="view" id="view-contact" data-view="contact" aria-labelledby="contactTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Contact</span></nav>
+      <h1 class="page-title" id="contactTitle">Talk to the nursery</h1>
+      <p class="page-sub">Questions about a plant, an order or your care routine? Send a message — or use the quick answers below.</p>
+    </div>
+  </div>
+
+  <div class="container contact-layout">
+    <div class="contact-form-wrap">
+      <h2 class="section__title section__title--sm">Send us a message</h2>
+      <p class="contact-form-wrap__note"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg> This is a demonstration form. Your message is validated on the server, saved to the nursery’s message queue, and visible to the administrator. No email is sent.</p>
+      <form id="contactForm" class="form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="contactName">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="contactName" name="name" autocomplete="name" required aria-required="true" aria-describedby="contactNameErr">
+            <p class="field-error" id="contactNameErr"></p>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email address <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="contactEmail" name="email" autocomplete="email" required aria-required="true" aria-describedby="contactEmailErr">
+            <p class="field-error" id="contactEmailErr"></p>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="contactPhone">Phone number <span class="field-hint">(optional)</span></label>
+            <input type="tel" id="contactPhone" name="phone" autocomplete="tel" inputmode="tel" aria-describedby="contactPhoneErr">
+            <p class="field-error" id="contactPhoneErr"></p>
+          </div>
+          <div class="field">
+            <label for="contactSubject">Subject <span class="req" aria-hidden="true">*</span></label>
+            <select id="contactSubject" name="subject" required aria-required="true" aria-describedby="contactSubjectErr">
+              <option value="">Choose a topic…</option>
+              <option>Plant care question</option>
+              <option>Product availability</option>
+              <option>Order help</option>
+              <option>Recommendation follow-up</option>
+              <option>Partnership or wholesale</option>
+              <option>Something else</option>
+            </select>
+            <p class="field-error" id="contactSubjectErr"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="contactMessage">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="contactMessage" name="message" rows="6" required aria-required="true" aria-describedby="contactMessageErr contactMessageHint"></textarea>
+          <p class="field-hint" id="contactMessageHint">Tell us about the plant, its light, and what you’ve noticed. <span id="contactCharCount">0</span>/600</p>
+          <p class="field-error" id="contactMessageErr"></p>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit">Send message</button>
+          <button class="btn btn--ghost" type="reset">Clear form</button>
+        </div>
+        <p class="form-msg" id="contactFormMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <aside class="contact-aside">
+      <div class="contact-card">
+        <h2>Nursery details</h2>
+        <p class="demo-tag">Demonstration data</p>
+        <ul class="contact-list">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><div><strong>Nursery &amp; demo store</strong><span>Verdant Organic Nursery, Sector 34, Chandigarh 160022, India</span></div></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><div><strong>Phone</strong><span>+91 98765 43210 <em>(sample)</em></span></div></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><div><strong>Email</strong><span>hello@verdant-demo.example</span></div></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><div><strong>Nursery hours</strong><span>Tue – Sun · 9:00 to 18:00</span></div></li>
+        </ul>
+        <p class="contact-card__note">These details are placeholders for this demonstration website and do not contact a real business.</p>
+      </div>
+
+      <div class="contact-card contact-card--soft">
+        <h2>Quick answers</h2>
+        <details>
+          <summary>How do I choose my first plant?</summary>
+          <p>Start with the <a href="#/recommender">plant recommender</a>. It considers your light, watering habits and experience level, then ranks plants by compatibility.</p>
+        </details>
+        <details>
+          <summary>Are the plants safe for pets?</summary>
+          <p>Pet safety depends on the species and the exposure. Every product page lists known toxicity information, and the recommender excludes plants known to be toxic to your selected pets. Always verify before bringing a plant home.</p>
+        </details>
+        <details>
+          <summary>Is checkout real?</summary>
+          <p>No — checkout is a demonstration. No payment is taken and no order is shipped, but your order details are saved on the Verdant server so the nursery administrator can review them.</p>
+        </details>
+        <details>
+          <summary>Where is my data stored?</summary>
+          <p>Cart, wishlist, questionnaire answers, saved plants and form submissions are stored in your browser’s LocalStorage. Clearing site data removes them.</p>
+        </details>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: WISHLIST
+     ============================================================ -->
+<section class="view" id="view-wishlist" data-view="wishlist" aria-labelledby="wishlistTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Wishlist</span></nav>
+      <h1 class="page-title" id="wishlistTitle">Your wishlist</h1>
+      <p class="page-sub" id="wishlistSub">Plants you’re saving for later.</p>
+    </div>
+  </div>
+  <div class="container section section--tight">
+    <div class="product-grid" id="wishlistGrid"></div>
+    <div class="empty-state" id="wishlistEmpty" hidden>
+      <span class="empty-state__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span>
+      <h2>Your wishlist is waiting for its first plant</h2>
+      <p>Tap the heart on any plant to save it here. Wishlists are stored in this browser, so they’re here when you return.</p>
+      <div class="empty-state__actions">
+        <a class="btn btn--primary" href="#/shop">Browse plants</a>
+        <a class="btn btn--outline" href="#/recommender">Get recommendations</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: CART
+     ============================================================ -->
+<section class="view" id="view-cart" data-view="cart" aria-labelledby="cartTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">Cart</span></nav>
+      <h1 class="page-title" id="cartTitle">Shopping cart</h1>
+      <p class="page-sub" id="cartSub">Review your plants and gardening essentials.</p>
+    </div>
+  </div>
+  <div class="container section section--tight">
+    <div class="cart-layout" id="cartLayout">
+      <div class="cart-main">
+        <div class="cart-panel">
+          <div class="cart-panel__head">
+            <h2>Your items</h2>
+            <button class="link-danger" type="button" id="clearCartBtn" hidden><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg> Clear cart</button>
+          </div>
+          <div id="cartItems"></div>
+          <p class="free-ship-note" id="freeShipNote"></p>
+          <div class="cart-panel__foot">
+            <a class="btn btn--ghost" href="#/shop"><svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg> Continue shopping</a>
+            <button class="btn btn--outline" type="button" id="updateCartBtn">Update cart</button>
+          </div>
+        </div>
+
+        <div class="cart-extras">
+          <div class="promo-box">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg> Care add-ons</h3>
+            <p>Everything a new plant parent needs, matched to what’s in your cart.</p>
+            <div class="addon-row" id="cartAddons"></div>
+          </div>
+          <div class="care-tip" id="cartCareTip"></div>
+        </div>
+      </div>
+
+      <aside class="order-summary" aria-labelledby="orderSummaryTitle">
+        <h2 class="order-summary__title" id="orderSummaryTitle">Order summary</h2>
+        <dl class="summary-list">
+          <div><dt>Subtotal</dt><dd id="sumSubtotal">₹0</dd></div>
+          <div><dt>Delivery</dt><dd id="sumDelivery">₹0</dd></div>
+          <div id="sumDiscountRow" hidden><dt>Discount <span class="summary-tag" id="sumDiscountTag"></span></dt><dd id="sumDiscount">−₹0</dd></div>
+          <div class="summary-list__total"><dt>Total</dt><dd id="sumTotal">₹0</dd></div>
+        </dl>
+        <p class="summary-note" id="sumNote"><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg> Free delivery on orders over ₹999.</p>
+        <button class="btn btn--primary btn--full" type="button" id="checkoutBtn" disabled>Proceed to checkout <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+        <p class="summary-fineprint">Demonstration checkout — no payment is taken. Your order is saved on the Verdant server.</p>
+        <div class="summary-trust">
+          <span><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Secure demo</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg> Eco packaging</span>
+          <span><svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg> Care guide included</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="empty-state" id="cartEmpty" hidden>
+      <span class="empty-state__icon"><svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg></span>
+      <h2>Your cart is empty</h2>
+      <p>Add a plant, some compost and a little guidance — we’ll keep everything together here.</p>
+      <div class="empty-state__actions">
+        <a class="btn btn--primary" href="#/shop">Start shopping</a>
+        <a class="btn btn--outline" href="#/recommender">Find my perfect plant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: CHECKOUT
+     ============================================================ -->
+<section class="view" id="view-checkout" data-view="checkout" aria-labelledby="checkoutTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/cart">Cart</a> <span aria-hidden="true">/</span> <span aria-current="page">Checkout</span></nav>
+      <h1 class="page-title" id="checkoutTitle">Checkout</h1>
+      <p class="page-sub">A demonstration checkout — no payment is processed and no order is shipped.</p>
+    </div>
+  </div>
+
+  <div class="container section section--tight">
+    <form id="checkoutForm" class="checkout-layout" novalidate>
+      <div class="checkout-main">
+        <fieldset class="checkout-panel">
+          <legend class="checkout-panel__legend"><span class="step-num">1</span> Contact details</legend>
+          <div class="form-row">
+            <div class="field">
+              <label for="coName">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="coName" name="fullName" autocomplete="name" required aria-describedby="coNameErr">
+              <p class="field-error" id="coNameErr"></p>
+            </div>
+            <div class="field">
+              <label for="coEmail">Email address <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="coEmail" name="email" autocomplete="email" required aria-describedby="coEmailErr">
+              <p class="field-error" id="coEmailErr"></p>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="coPhone">Phone number <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="coPhone" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="coPhoneErr coPhoneHint">
+              <p class="field-hint" id="coPhoneHint">10-digit Indian mobile number for this demo.</p>
+              <p class="field-error" id="coPhoneErr"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-panel">
+          <legend class="checkout-panel__legend"><span class="step-num">2</span> Delivery address</legend>
+          <div class="field">
+            <label for="coStreet">House number &amp; street <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="coStreet" name="street" autocomplete="address-line1" required aria-describedby="coStreetErr">
+            <p class="field-error" id="coStreetErr"></p>
+          </div>
+          <div class="form-row form-row--3">
+            <div class="field">
+              <label for="coCity">City <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="coCity" name="city" autocomplete="address-level2" required aria-describedby="coCityErr">
+              <p class="field-error" id="coCityErr"></p>
+            </div>
+            <div class="field">
+              <label for="coState">State <span class="req" aria-hidden="true">*</span></label>
+              <select id="coState" name="state" autocomplete="address-level1" required aria-describedby="coStateErr">
+                <option value="">Select state…</option>
+                <option>Punjab</option><option>Chandigarh</option><option>Delhi</option><option>Haryana</option>
+                <option>Himachal Pradesh</option><option>Jammu &amp; Kashmir</option><option>Ladakh</option><option>Uttar Pradesh</option>
+                <option>Uttarakhand</option><option>Rajasthan</option><option>Gujarat</option><option>Maharashtra</option>
+                <option>Goa</option><option>Karnataka</option><option>Kerala</option><option>Tamil Nadu</option>
+                <option>Telangana</option><option>Andhra Pradesh</option><option>Madhya Pradesh</option><option>Chhattisgarh</option>
+                <option>Odisha</option><option>West Bengal</option><option>Bihar</option><option>Jharkhand</option>
+                <option>Assam</option><option>Sikkim</option><option>Meghalaya</option><option>Tripura</option>
+                <option>Manipur</option><option>Mizoram</option><option>Nagaland</option><option>Arunachal Pradesh</option>
+                <option>Puducherry</option><option>Andaman &amp; Nicobar Islands</option><option>Lakshadweep</option><option>Dadra &amp; Nagar Haveli and Daman &amp; Diu</option>
+              </select>
+              <p class="field-error" id="coStateErr"></p>
+            </div>
+            <div class="field">
+              <label for="coPin">PIN code <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="coPin" name="pin" inputmode="numeric" autocomplete="postal-code" maxlength="6" required aria-describedby="coPinErr">
+              <p class="field-error" id="coPinErr"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="coNotes">Delivery instructions <span class="field-hint">(optional)</span></label>
+            <textarea id="coNotes" name="notes" rows="3" maxlength="300" aria-describedby="coNotesHint"></textarea>
+            <p class="field-hint" id="coNotesHint">Gate code, safe place to leave the parcel, best time to deliver…</p>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-panel">
+          <legend class="checkout-panel__legend"><span class="step-num">3</span> Payment method <span class="pill pill--warn">Demo only</span></legend>
+          <p class="checkout-panel__note"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> This is a demonstration. No payment details are collected, processed or stored — never enter real card numbers, UPI IDs or PINs here.</p>
+          <div class="pay-options" id="payOptions">
+            <label class="pay-option">
+              <input type="radio" name="payment" value="cod" checked>
+              <span class="pay-option__body">
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-truck"></use></svg></span>
+                <span class="pay-option__text"><strong>Cash on Delivery</strong><span>Pay when your plants arrive (demo)</span></span>
+                <span class="pay-option__check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="payment" value="upi">
+              <span class="pay-option__body">
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+                <span class="pay-option__text"><strong>UPI</strong><span>Simulated UPI payment (demo)</span></span>
+                <span class="pay-option__check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="payment" value="card">
+              <span class="pay-option__body">
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+                <span class="pay-option__text"><strong>Card payment</strong><span>Simulated card payment (demo)</span></span>
+                <span class="pay-option__check"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              </span>
+            </label>
+          </div>
+          <p class="pay-demo-msg" id="payDemoMsg" role="status" aria-live="polite"></p>
+        </fieldset>
+      </div>
+
+      <aside class="order-summary order-summary--checkout" aria-labelledby="coSummaryTitle">
+        <h2 class="order-summary__title" id="coSummaryTitle">Order summary</h2>
+        <div id="checkoutItems" class="checkout-items"></div>
+        <dl class="summary-list">
+          <div><dt>Subtotal</dt><dd id="coSubtotal">₹0</dd></div>
+          <div><dt>Delivery</dt><dd id="coDelivery">₹0</dd></div>
+          <div id="coDiscountRow" hidden><dt>Discount</dt><dd id="coDiscount">−₹0</dd></div>
+          <div class="summary-list__total"><dt>Total</dt><dd id="coTotal">₹0</dd></div>
+        </dl>
+        <p class="form-msg" id="checkoutMsg" role="status" aria-live="polite"></p>
+        <button class="btn btn--primary btn--full" type="submit" id="placeOrderBtn">Place order</button>
+        <p class="summary-fineprint">Demonstration store: no real payment or shipping occurs. Your order details are saved on the Verdant server for the nursery administrator.</p>
+        <a class="link-arrow" href="#/cart">Back to cart</a>
+      </aside>
+    </form>
+
+    <div class="empty-state" id="checkoutEmpty" hidden>
+      <span class="empty-state__icon"><svg class="icon" aria-hidden="true"><use href="#i-cart"></use></svg></span>
+      <h2>There’s nothing to check out</h2>
+      <p>Add a plant to your cart first, then come back to complete the demo order.</p>
+      <a class="btn btn--primary" href="#/shop">Browse plants</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: ORDER CONFIRMATION
+     ============================================================ -->
+<section class="view" id="view-confirmation" data-view="confirmation" aria-labelledby="confirmTitle" hidden>
+  <div class="container section">
+    <div class="confirm-wrap" id="confirmWrap">
+      <!-- rendered by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VIEW: DASHBOARD
+     ============================================================ -->
+<section class="view" id="view-dashboard" data-view="dashboard" aria-labelledby="dashTitle" hidden>
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="#/home">Home</a> <span aria-hidden="true">/</span> <a href="#/care">Plant Care</a> <span aria-hidden="true">/</span> <span aria-current="page">Dashboard</span></nav>
+      <div class="page-head__row">
+        <div>
+          <h1 class="page-title" id="dashTitle">My plant dashboard</h1>
+          <p class="page-sub">Track watering, fertilising and notes for every plant in your home. Saved in this browser only.</p>
+        </div>
+        <button class="btn btn--primary" type="button" id="addPlantBtn"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add a plant</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container section section--tight">
+    <div class="stat-grid" id="dashStats">
+      <article class="stat-card">
+        <span class="stat-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg></span>
+        <p class="stat-card__value" id="statTotal">0</p>
+        <p class="stat-card__label">Plants in collection</p>
+      </article>
+      <article class="stat-card stat-card--warn">
+        <span class="stat-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg></span>
+        <p class="stat-card__value" id="statAttention">0</p>
+        <p class="stat-card__label">Need attention</p>
+      </article>
+      <article class="stat-card stat-card--blue">
+        <span class="stat-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-drop"></use></svg></span>
+        <p class="stat-card__value" id="statWaterToday">0</p>
+        <p class="stat-card__label">Water check due today</p>
+      </article>
+      <article class="stat-card stat-card--accent">
+        <span class="stat-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-soil"></use></svg></span>
+        <p class="stat-card__value" id="statFertDue">0</p>
+        <p class="stat-card__label">Feed due this week</p>
+      </article>
+    </div>
+
+    <div class="dash-layout">
+      <div class="dash-main">
+        <section class="dash-panel" aria-labelledby="collectionTitle">
+          <div class="dash-panel__head">
+            <h2 id="collectionTitle">Plant collection</h2>
+            <div class="dash-panel__tools">
+              <label class="sr-only" for="dashSort">Sort plants</label>
+              <select id="dashSort" class="select select--sm">
+                <option value="watering">Next water check</option>
+                <option value="added">Recently added</option>
+                <option value="name">Name A–Z</option>
+              </select>
+            </div>
+          </div>
+          <div class="dash-list" id="dashList"></div>
+          <div class="empty-state empty-state--sm" id="dashEmpty" hidden>
+            <span class="empty-state__icon"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"></use></svg></span>
+            <h3>Your collection is empty</h3>
+            <p>Add your first plant to start tracking watering, fertilising and notes. Pick one from your order history or add it manually.</p>
+            <button class="btn btn--primary" type="button" id="dashEmptyAdd">Add a plant</button>
+          </div>
+        </section>
+      </div>
+
+      <aside class="dash-side">
+        <section class="dash-panel dash-panel--soft" aria-labelledby="scheduleTitle">
+          <h2 id="scheduleTitle">Upcoming care</h2>
+          <div id="upcomingList" class="upcoming-list"></div>
+        </section>
+        <section class="dash-panel" aria-labelledby="notesTitle">
+          <h2 id="notesTitle">Care journal</h2>
+          <p class="dash-panel__note">A quick place for what you noticed this week.</p>
+          <form id="journalForm" class="journal-form">
+            <label class="sr-only" for="journalInput">Journal note</label>
+            <textarea id="journalInput" rows="3" maxlength="240" placeholder="e.g. Moved the snake plant closer to the bright window."></textarea>
+            <button class="btn btn--outline btn--sm" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add note</button>
+          </form>
+          <ul class="journal-list" id="journalList"></ul>
+        </section>
+        <section class="dash-panel dash-panel--tip">
+          <h2>Remember</h2>
+          <p>Watering dates are reminders to <strong>check the soil</strong>, not instructions to water on a fixed schedule. Light, pot size, drainage and season all change how fast soil dries.</p>
+        </section>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container footer__top">
+    <div class="footer__brand">
+      <a class="brand brand--footer" href="#/home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 27c0-8 3.4-12.6 10-14.8C25 20 22.7 24.6 16 27Z" fill="currentColor" opacity=".9"/><path d="M16 27C16 19 12.6 14.4 6 12.2 7 20 9.3 24.6 16 27Z" fill="currentColor" opacity=".65"/><path d="M16 27c0-6 .6-10.6 2-15" fill="none" stroke="#95D5B2" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Verdant</span>
+          <span class="brand__tag">Organic Plant Nursery</span>
+        </span>
+      </a>
+      <p class="footer__tagline">Grow Naturally. Live Beautifully.</p>
+      <p class="footer__about">Nursery-grown plants, organic gardening essentials and plant-care guidance that helps you grow with confidence.</p>
+      <div class="social-list" aria-label="Social media (demonstration links)">
+        <a href="#/contact" aria-label="Instagram (demo link)"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a>
+        <a href="#/contact" aria-label="Facebook (demo link)"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a>
+        <a href="#/contact" aria-label="YouTube (demo link)"><svg class="icon" aria-hidden="true"><use href="#i-youtube"></use></svg></a>
+        <a href="#/contact" aria-label="Pinterest (demo link)"><svg class="icon" aria-hidden="true"><use href="#i-pinterest"></use></svg></a>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-labelledby="fQuick">
+      <h2 id="fQuick">Explore</h2>
+      <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/shop">Shop plants</a></li>
+        <li><a href="#/categories">Plant categories</a></li>
+        <li><a href="#/recommender">Plant recommender</a></li>
+        <li><a href="#/about">About us</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-labelledby="fShop">
+      <h2 id="fShop">Shop</h2>
+      <ul>
+        <li><a href="#/shop?category=indoor">Indoor plants</a></li>
+        <li><a href="#/shop?category=succulents">Succulents &amp; cacti</a></li>
+        <li><a href="#/shop?category=flowering">Flowering plants</a></li>
+        <li><a href="#/shop?category=medicinal">Medicinal &amp; herbs</a></li>
+        <li><a href="#/shop?category=essentials">Gardening essentials</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__col" aria-labelledby="fSupport">
+      <h2 id="fSupport">Support</h2>
+      <ul>
+        <li><a href="#/care">Plant care centre</a></li>
+        <li><a href="#/care#problemChecker">Problem identifier</a></li>
+        <li><a href="#/dashboard">My plant dashboard</a></li>
+        <li><a href="#/contact">Contact us</a></li>
+        <li><a href="#/wishlist">Wishlist</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col footer__col--contact">
+      <h2>Get in touch</h2>
+      <ul class="footer__contact">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg> Sector 34, Chandigarh 160022 <span class="demo-mini">(demo)</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> +91 98765 43210 <span class="demo-mini">(sample)</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> hello@verdant-demo.example</li>
+      </ul>
+      <p class="footer__news">New plants, seasonal care notes and offers — join the newsletter at the top of the homepage.</p>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p class="copyright">© <span id="year">2025</span> Verdant Organic Plant Nursery. A demonstration project with a Node.js backend.</p>
+    <ul class="footer__legal">
+      <li><button type="button" class="link-button" data-legal="privacy">Privacy policy</button></li>
+      <li><button type="button" class="link-button" data-legal="terms">Terms &amp; conditions</button></li>
+      <li><button type="button" class="link-button" data-legal="shipping">Delivery &amp; returns</button></li>
+      <li><button type="button" class="link-button" data-legal="accessibility">Accessibility</button></li>
+    </ul>
+  </div>
+</footer>
+
+<button class="to-top" type="button" id="toTop" aria-label="Back to top" hidden>
+  <svg class="icon" aria-hidden="true"><use href="#i-up"></use></svg>
+</button>
+
+<!-- ============================================================
+     MODAL (shared shell — content injected by script.js)
+     ============================================================ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+    <div class="modal__head">
+      <h2 class="modal__title" id="modalTitle">Details</h2>
+      <button class="icon-btn modal__close" type="button" data-close-modal aria-label="Close dialog">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <div class="modal__body" id="modalBody"></div>
+    <div class="modal__foot" id="modalFoot" hidden></div>
+  </div>
+</div>
+
+<!-- Toast region -->
+<div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="false"></div>
+
+<!-- Mobile sticky buy bar (product modal) -->
+<div class="mobile-buybar" id="mobileBuyBar" hidden></div>
+
+<noscript>
+  <div class="noscript">Verdant needs JavaScript for the shop, recommender and cart to work. Please enable JavaScript and reload.</div>
+</noscript>
+
+<script src="script.js" defer></script>
+</body>
+</html>

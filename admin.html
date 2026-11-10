@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>VERDANT – Administration Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VERDANT — Administration Panel
+   Self-contained stylesheet: the admin panel shares the brand tokens
+   with the storefront but must not depend on the customer stylesheet.
+   ============================================================ */
+:root{
+  --green-900:#12301F; --green-800:#1B4332; --green-700:#2D6A4F; --green-600:#357A5B;
+  --mint:#95D5B2; --mint-100:#E4F3EA; --cream:#FAF9F6; --sand:#EDE8D5;
+  --white:#FFFFFF; --ink:#26332C; --muted:#777F78; --accent:#DDA15E;
+  --danger:#B4442F; --danger-bg:#FBEDE9; --warn:#9A6B18; --warn-bg:#FDF3E1;
+  --ok:#2D6A4F; --ok-bg:#E4F3EA; --info:#2F5D8C; --info-bg:#E8F0F8;
+  --line:rgba(38,51,44,.13); --line-strong:rgba(38,51,44,.22);
+  --sh-sm:0 1px 2px rgba(27,67,50,.06),0 2px 8px rgba(27,67,50,.05);
+  --sh-md:0 4px 14px rgba(27,67,50,.08),0 12px 32px rgba(27,67,50,.07);
+  --sh-lg:0 18px 48px rgba(18,48,31,.16);
+  --r-sm:8px; --r-md:12px; --r-lg:18px;
+  --font-serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --font-sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:var(--font-sans); font-size:15px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:var(--font-serif); color:var(--green-800); margin:0; font-weight:600; letter-spacing:-.01em}
+button{font:inherit; color:inherit}
+a{color:var(--green-700)}
+[hidden]{display:none !important}
+:focus-visible{outline:2px solid var(--green-600); outline-offset:2px; border-radius:4px}
+
+/* ---------- shared bits ---------- */
+.eyebrow{font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); font-weight:600}
+.muted{color:var(--muted)}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.45rem;
+  border-radius:999px; border:1px solid transparent; padding:.6rem 1.15rem;
+  font-size:.86rem; font-weight:600; cursor:pointer; text-decoration:none;
+  transition:background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease), transform .15s var(--ease);
+  white-space:nowrap;
+}
+.btn:active{transform:translateY(1px)}
+.btn--primary{background:var(--green-800); color:#fff}
+.btn--primary:hover{background:var(--green-700); box-shadow:var(--sh-sm)}
+.btn--outline{background:transparent; border-color:var(--line-strong); color:var(--green-800)}
+.btn--outline:hover{background:var(--mint-100); border-color:var(--green-700)}
+.btn--ghost{background:transparent; color:var(--green-700); border-color:transparent}
+.btn--ghost:hover{background:var(--mint-100)}
+.btn--accent{background:var(--accent); color:#3A2A12}
+.btn--accent:hover{background:#cf9248}
+.btn--sm{padding:.4rem .8rem; font-size:.78rem}
+.btn--block{width:100%}
+.btn[disabled]{opacity:.55; cursor:not-allowed; transform:none}
+.btn.is-loading{position:relative; color:transparent !important}
+.btn.is-loading::after{
+  content:""; position:absolute; width:15px; height:15px; border-radius:50%;
+  border:2px solid rgba(255,255,255,.45); border-top-color:#fff;
+  animation:spin .7s linear infinite;
+}
+.btn--outline.is-loading::after,.btn--ghost.is-loading::after{border-color:rgba(27,67,50,.25); border-top-color:var(--green-700)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.field{display:flex; flex-direction:column; gap:.3rem; min-width:0}
+.field label{font-size:.78rem; font-weight:600; color:var(--ink)}
+.field input,.field select,.field textarea{
+  width:100%; font:inherit; font-size:.88rem; color:var(--ink);
+  background:#fff; border:1px solid var(--line-strong); border-radius:var(--r-sm);
+  padding:.6rem .75rem; transition:border-color .18s var(--ease), box-shadow .18s var(--ease);
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none; border-color:var(--green-700); box-shadow:0 0 0 3px rgba(45,106,79,.13);
+}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:var(--danger); box-shadow:0 0 0 3px rgba(180,68,47,.1)}
+.field__hint{font-size:.72rem; color:var(--muted)}
+.field__error{font-size:.74rem; color:var(--danger); min-height:1.05rem; line-height:1.05rem}
+
+.panel{background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:var(--sh-sm)}
+.panel__head{display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  padding:1rem 1.25rem; border-bottom:1px solid var(--line)}
+.panel__head h2{font-size:1.08rem}
+.panel__body{padding:1.25rem}
+
+.tag{display:inline-flex; align-items:center; gap:.35rem; border-radius:999px; padding:.2rem .6rem;
+  font-size:.7rem; font-weight:600; letter-spacing:.02em; border:1px solid transparent; white-space:nowrap}
+.tag--mint{background:var(--mint-100); color:var(--green-800)}
+.tag--sand{background:var(--warn-bg); color:var(--warn)}
+.tag--blue{background:var(--info-bg); color:var(--info)}
+.tag--green{background:var(--ok-bg); color:var(--ok)}
+.tag--red{background:var(--danger-bg); color:var(--danger)}
+.tag--grey{background:#F2F3F1; color:var(--muted)}
+
+/* ---------- login ---------- */
+.login{
+  min-height:100vh; display:grid; grid-template-columns:1.05fr .95fr;
+  background:var(--cream);
+}
+.login__brand{
+  position:relative; overflow:hidden; color:#fff;
+  background:linear-gradient(155deg,#12301F 0%,#1B4332 45%,#2D6A4F 100%);
+  padding:clamp(2rem,5vw,4rem); display:flex; flex-direction:column; justify-content:space-between;
+}
+.login__brand::before{
+  content:""; position:absolute; width:520px; height:520px; border-radius:50%;
+  right:-170px; bottom:-190px; background:radial-gradient(circle at 30% 30%,rgba(149,213,178,.3),transparent 62%);
+}
+.login__brand::after{
+  content:""; position:absolute; inset:0; opacity:.055;
+  background-image:radial-gradient(circle at 1px 1px,#fff 1px,transparent 0);
+  background-size:22px 22px;
+}
+.login__brand > *{position:relative; z-index:1}
+.login__logo{display:flex; align-items:center; gap:.85rem}
+.login__mark{
+  width:46px; height:46px; border-radius:13px; display:grid; place-items:center;
+  background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22); color:var(--mint);
+  font-size:1.35rem;
+}
+.login__logo strong{display:block; font-family:var(--font-serif); font-size:1.25rem; letter-spacing:.02em; line-height:1.1}
+.login__logo span{font-size:.62rem; letter-spacing:.24em; text-transform:uppercase; color:rgba(255,255,255,.66)}
+.login__headline{font-family:var(--font-serif); font-size:clamp(1.9rem,3.4vw,2.9rem); line-height:1.15; margin:2.5rem 0 .9rem; color:#fff; font-weight:500}
+.login__sub{color:rgba(255,255,255,.76); max-width:38ch; font-size:.93rem; margin:0}
+.login__points{list-style:none; padding:0; margin:2rem 0 0; display:grid; gap:.65rem; font-size:.86rem; color:rgba(255,255,255,.8)}
+.login__points li{display:flex; gap:.6rem; align-items:flex-start}
+.login__points svg{flex:0 0 auto; margin-top:.15rem; color:var(--mint)}
+.login__foot{font-size:.72rem; color:rgba(255,255,255,.5); letter-spacing:.04em}
+
+.login__form-wrap{display:flex; align-items:center; justify-content:center; padding:clamp(1.5rem,5vw,3.5rem)}
+.login__card{width:100%; max-width:400px}
+.login__card h1{font-size:1.6rem; margin-bottom:.3rem}
+.login__card > p{margin:0 0 1.6rem; color:var(--muted); font-size:.88rem}
+.login__form{display:flex; flex-direction:column; gap:.85rem}
+.pw-wrap{position:relative; display:flex}
+.pw-wrap input{padding-right:3.9rem}
+.pw-toggle{
+  position:absolute; right:.45rem; top:50%; transform:translateY(-50%);
+  background:transparent; border:0; cursor:pointer; padding:.3rem .45rem; border-radius:5px;
+  color:var(--muted); font-size:.68rem; font-weight:700; letter-spacing:.06em;
+  line-height:1; z-index:1;
+}
+.pw-toggle:hover{color:var(--green-700); background:var(--mint-100)}
+.login__error{
+  display:none; align-items:flex-start; gap:.5rem; font-size:.8rem; border-radius:var(--r-sm);
+  padding:.6rem .75rem; background:var(--danger-bg); color:var(--danger); border:1px solid rgba(180,68,47,.2);
+}
+.login__error.is-visible{display:flex}
+.login__note{
+  margin-top:1.5rem; font-size:.74rem; color:var(--muted); background:#fff;
+  border:1px dashed var(--line-strong); border-radius:var(--r-sm); padding:.7rem .85rem;
+}
+.login__note code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.72rem;
+  background:var(--sand); padding:.08rem .3rem; border-radius:4px; color:var(--green-800)}
+
+/* ---------- app shell ---------- */
+.shell{min-height:100vh; display:grid; grid-template-columns:260px 1fr}
+.side{
+  background:var(--green-900); color:#fff; padding:1.35rem 1rem;
+  display:flex; flex-direction:column; gap:.35rem; position:sticky; top:0; height:100vh; overflow-y:auto;
+}
+.side__logo{display:flex; align-items:center; gap:.7rem; padding:.35rem .5rem 1.4rem}
+.side__mark{width:38px; height:38px; border-radius:11px; display:grid; place-items:center;
+  background:rgba(149,213,178,.16); border:1px solid rgba(149,213,178,.25); color:var(--mint); font-size:1.1rem}
+.side__logo strong{display:block; font-family:var(--font-serif); font-size:1.02rem; line-height:1.15}
+.side__logo span{font-size:.58rem; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.5)}
+.side__label{font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.4);
+  padding:1rem .6rem .4rem}
+.side__nav{display:flex; flex-direction:column; gap:.15rem}
+.nav-btn{
+  display:flex; align-items:center; gap:.65rem; width:100%; text-align:left; cursor:pointer;
+  background:transparent; border:0; border-radius:var(--r-sm); padding:.6rem .7rem;
+  color:rgba(255,255,255,.76); font-size:.85rem; font-weight:500;
+  transition:background .18s var(--ease), color .18s var(--ease);
+}
+.nav-btn:hover{background:rgba(255,255,255,.07); color:#fff}
+.nav-btn[aria-current="page"]{background:rgba(149,213,178,.17); color:#fff; font-weight:600;
+  box-shadow:inset 2px 0 0 var(--mint)}
+.nav-btn__count{
+  margin-left:auto; font-size:.66rem; font-weight:700; min-width:20px; height:18px; padding:0 .35rem;
+  border-radius:999px; background:rgba(255,255,255,.14); display:inline-flex; align-items:center; justify-content:center;
+}
+.nav-btn[aria-current="page"] .nav-btn__count{background:var(--mint); color:var(--green-900)}
+.side__spacer{flex:1}
+.side__user{border-top:1px solid rgba(255,255,255,.1); padding-top:.9rem; margin-top:.9rem; font-size:.76rem; color:rgba(255,255,255,.6)}
+.side__user strong{display:block; color:#fff; font-size:.84rem; font-weight:600}
+.side__foot{padding:.5rem .7rem 0; font-size:.66rem; color:rgba(255,255,255,.35); line-height:1.5}
+
+.main{display:flex; flex-direction:column; min-width:0}
+.topbar{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  padding:1rem 1.6rem; background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20;
+}
+.topbar__title{font-size:1.15rem}
+.topbar__sub{font-size:.76rem; color:var(--muted); margin:.1rem 0 0}
+.topbar__actions{display:flex; align-items:center; gap:.5rem; flex-wrap:wrap}
+.view{padding:1.6rem; display:flex; flex-direction:column; gap:1.25rem; max-width:1500px; width:100%}
+
+/* ---------- stats ---------- */
+.stats{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem}
+.stat{
+  background:#fff; border:1px solid var(--line); border-radius:var(--r-lg); padding:1.05rem 1.15rem;
+  box-shadow:var(--sh-sm); position:relative; overflow:hidden;
+}
+.stat::after{
+  content:""; position:absolute; right:-28px; bottom:-34px; width:96px; height:96px; border-radius:50%;
+  background:radial-gradient(circle,var(--mint-100),transparent 70%);
+}
+.stat__label{font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600}
+.stat__value{font-family:var(--font-serif); font-size:1.9rem; line-height:1.2; color:var(--green-800); margin:.25rem 0 .1rem; position:relative; z-index:1}
+.stat__foot{font-size:.72rem; color:var(--muted); position:relative; z-index:1}
+.stat--accent{background:linear-gradient(150deg,#2D6A4F,#1B4332); border-color:transparent}
+.stat--accent .stat__label,.stat--accent .stat__foot{color:rgba(255,255,255,.7)}
+.stat--accent .stat__value{color:#fff}
+.stat--accent::after{background:radial-gradient(circle,rgba(149,213,178,.35),transparent 70%)}
+
+.overview-grid{display:grid; grid-template-columns:1.35fr .65fr; gap:1.25rem; align-items:start}
+.status-list{display:grid; gap:.55rem}
+.status-row{display:flex; align-items:center; gap:.7rem; font-size:.83rem}
+.status-row__bar{display:block; flex:1; height:8px; border-radius:999px; background:#EAEDE8; overflow:hidden; min-width:60px}
+.status-row__fill{display:block; height:100%; border-radius:999px; background:linear-gradient(90deg,var(--green-700),var(--mint)); transition:width .5s var(--ease); min-width:2px}
+.status-row__n{font-variant-numeric:tabular-nums; font-weight:600; color:var(--green-800); min-width:2ch; text-align:right}
+
+/* ---------- tables ---------- */
+.table-wrap{overflow-x:auto; border-radius:var(--r-md)}
+table{width:100%; border-collapse:collapse; font-size:.83rem}
+thead th{
+  text-align:left; font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted);
+  font-weight:700; padding:.6rem .8rem; background:#FBFBF9; border-bottom:1px solid var(--line); white-space:nowrap;
+}
+tbody td{padding:.72rem .8rem; border-bottom:1px solid var(--line); vertical-align:middle}
+tbody tr{transition:background .15s var(--ease)}
+tbody tr:hover{background:#FCFCFA}
+tbody tr:last-child td{border-bottom:0}
+.num{font-variant-numeric:tabular-nums}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.78rem; color:var(--green-800); font-weight:600; white-space:nowrap}
+.td-name{font-weight:600; color:var(--ink)}
+.td-sub{font-size:.74rem; color:var(--muted)}
+.table-actions{display:flex; gap:.35rem; flex-wrap:wrap}
+
+/* ---------- toolbar / filters ---------- */
+.toolbar{display:grid; grid-template-columns:minmax(200px,1.6fr) repeat(auto-fit,minmax(130px,1fr)); gap:.65rem; align-items:end}
+.toolbar--wide{grid-template-columns:minmax(200px,2fr) repeat(auto-fit,minmax(125px,1fr))}
+.search-wrap{position:relative}
+.search-wrap input{padding-left:2.1rem}
+.search-wrap svg{position:absolute; left:.7rem; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none}
+
+/* ---------- misc ---------- */
+.empty{
+  text-align:center; padding:2.6rem 1rem; color:var(--muted); font-size:.86rem;
+}
+.empty strong{display:block; font-family:var(--font-serif); font-size:1.05rem; color:var(--green-800); margin-bottom:.25rem}
+.chip-row{display:flex; gap:.4rem; flex-wrap:wrap}
+.chip{
+  border:1px solid var(--line-strong); background:#fff; border-radius:999px; padding:.32rem .75rem;
+  font-size:.76rem; font-weight:600; cursor:pointer; color:var(--muted); transition:all .18s var(--ease);
+}
+.chip:hover{border-color:var(--green-700); color:var(--green-800)}
+.chip[aria-pressed="true"]{background:var(--green-800); border-color:var(--green-800); color:#fff}
+
+/* ---------- modal ---------- */
+.modal{position:fixed; inset:0; z-index:60; display:grid; place-items:center; padding:1.2rem}
+.modal__backdrop{position:absolute; inset:0; background:rgba(18,48,31,.55); backdrop-filter:blur(3px); animation:fade .22s var(--ease)}
+.modal__panel{
+  position:relative; background:var(--cream); border-radius:var(--r-lg); box-shadow:var(--sh-lg);
+  width:min(820px,100%); max-height:92vh; display:flex; flex-direction:column; overflow:hidden;
+  animation:pop .26s var(--ease);
+}
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{opacity:0; transform:translateY(14px) scale(.985)}}
+.modal__head{display:flex; align-items:flex-start; justify-content:space-between; gap:1rem;
+  padding:1.1rem 1.3rem; background:#fff; border-bottom:1px solid var(--line)}
+.modal__head h2{font-size:1.15rem}
+.modal__head p{margin:.15rem 0 0; font-size:.76rem; color:var(--muted)}
+.modal__close{
+  background:#F5F6F3; border:1px solid var(--line); width:34px; height:34px; border-radius:50%;
+  display:grid; place-items:center; cursor:pointer; color:var(--ink); flex:0 0 auto;
+}
+.modal__close:hover{background:var(--mint-100); border-color:var(--green-700)}
+.modal__body{padding:1.3rem; overflow-y:auto}
+.modal__foot{padding:1rem 1.3rem; background:#fff; border-top:1px solid var(--line);
+  display:flex; justify-content:flex-end; gap:.5rem; flex-wrap:wrap}
+
+.detail-grid{display:grid; grid-template-columns:1fr 1fr; gap:1rem}
+.detail-card{background:#fff; border:1px solid var(--line); border-radius:var(--r-md); padding:1rem 1.1rem}
+.detail-card h3{font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+  font-family:var(--font-sans); font-weight:700; margin-bottom:.7rem}
+.dl{display:grid; gap:.5rem; margin:0; font-size:.84rem}
+.dl > div{display:grid; grid-template-columns:96px 1fr; gap:.6rem; align-items:baseline}
+.dl dt{color:var(--muted); font-size:.76rem}
+.dl dd{margin:0; color:var(--ink); overflow-wrap:anywhere}
+.item-row{display:flex; align-items:center; gap:.75rem; padding:.6rem 0; border-bottom:1px solid var(--line)}
+.item-row:last-child{border-bottom:0}
+.item-row img{width:46px; height:46px; border-radius:8px; object-fit:cover; background:var(--mint-100); flex:0 0 auto}
+.item-row__main{flex:1; min-width:0}
+.item-row__name{font-weight:600; font-size:.85rem}
+.item-row__meta{font-size:.74rem; color:var(--muted)}
+.item-row__total{font-weight:700; font-variant-numeric:tabular-nums; font-size:.86rem}
+.totals{margin-top:.9rem; border-top:1px dashed var(--line-strong); padding-top:.8rem; display:grid; gap:.35rem; font-size:.85rem}
+.totals > div{display:flex; justify-content:space-between; gap:1rem}
+.totals .totals__grand{font-size:1rem; font-weight:700; color:var(--green-800); border-top:1px solid var(--line);
+  padding-top:.55rem; margin-top:.15rem}
+.timeline{list-style:none; margin:.6rem 0 0; padding:0 0 0 1rem; border-left:2px solid var(--line); display:grid; gap:.5rem; font-size:.79rem}
+.timeline li{position:relative; color:var(--muted)}
+.timeline li::before{content:""; position:absolute; left:-1.32rem; top:.42rem; width:8px; height:8px;
+  border-radius:50%; background:var(--green-700); border:2px solid #fff; box-shadow:0 0 0 1px var(--green-700)}
+.timeline strong{color:var(--ink)}
+.history-list{display:grid; gap:.4rem; margin:.5rem 0 0; font-size:.8rem}
+.history-item{display:flex; justify-content:space-between; gap:.6rem; padding:.4rem .6rem;
+  background:var(--cream); border:1px solid var(--line); border-radius:var(--r-sm)}
+.status-select{font:inherit; font-size:.79rem; padding:.35rem .55rem; border-radius:999px;
+  border:1px solid var(--line-strong); background:#fff; color:var(--ink); cursor:pointer}
+
+/* ---------- product form ---------- */
+.form-grid{display:grid; grid-template-columns:1fr 1fr; gap:.85rem}
+.form-grid .field--full{grid-column:1/-1}
+
+/* ---------- toast ---------- */
+.toasts{position:fixed; right:1.2rem; bottom:1.2rem; z-index:90; display:flex; flex-direction:column; gap:.5rem; max-width:340px}
+.toast{
+  display:flex; gap:.6rem; align-items:flex-start; background:#fff; border:1px solid var(--line);
+  border-left:4px solid var(--green-700); border-radius:var(--r-md); padding:.7rem .85rem;
+  box-shadow:var(--sh-md); font-size:.82rem; animation:slideIn .3s var(--ease);
+}
+.toast--error{border-left-color:var(--danger)}
+.toast--warn{border-left-color:var(--accent)}
+.toast strong{display:block; font-size:.82rem; margin-bottom:.1rem}
+.toast span{color:var(--muted); font-size:.78rem}
+@keyframes slideIn{from{opacity:0; transform:translateX(16px)}}
+
+/* ---------- banner ---------- */
+.notice{
+  display:flex; gap:.7rem; align-items:flex-start; background:var(--warn-bg); color:#6E4B12;
+  border:1px solid rgba(221,161,94,.4); border-radius:var(--r-md); padding:.75rem .95rem; font-size:.8rem;
+}
+.notice--info{background:var(--info-bg); color:#2A4C72; border-color:rgba(47,93,140,.25)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .overview-grid{grid-template-columns:1fr}
+  .login{grid-template-columns:1fr}
+  .login__brand{min-height:auto; padding:1.6rem}
+  .login__headline{font-size:1.5rem; margin:1.4rem 0 .6rem}
+  .login__points{display:none}
+  .login__foot{display:none}
+}
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr}
+  .side{position:static; height:auto; flex-direction:row; align-items:center; gap:.5rem;
+    padding:.7rem .9rem; overflow-x:auto; flex-wrap:nowrap}
+  .side__logo{padding:0 .5rem 0 0; flex:0 0 auto}
+  .side__logo span,.side__label,.side__user,.side__foot,.side__spacer{display:none}
+  .side__nav{flex-direction:row; gap:.3rem}
+  .nav-btn{white-space:nowrap; padding:.5rem .7rem}
+  .nav-btn[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--mint)}
+  .view{padding:1rem}
+  .detail-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .topbar{padding:.85rem 1rem}
+}
+@media (max-width:1080px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .stats{grid-template-columns:1fr 1fr; gap:.7rem}
+  .stat{padding:.85rem .9rem}
+  .stat__value{font-size:1.35rem; margin:.18rem 0 .05rem}
+  .stat__label{font-size:.6rem; letter-spacing:.09em}
+  .stat__foot{font-size:.66rem}
+  .toolbar,.toolbar--wide{grid-template-columns:1fr}
+  .dl > div{grid-template-columns:1fr; gap:.1rem}
+  .modal{padding:.6rem}
+  .side__logo strong{font-size:.9rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important; transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     LOGIN
+     ============================================================ -->
+<div class="login" id="loginScreen">
+  <div class="login__brand">
+    <div>
+      <div class="login__logo">
+        <span class="login__mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+        <div>
+          <strong>Verdant</strong>
+          <span>Organic Plant Nursery</span>
+        </div>
+      </div>
+      <h2 class="login__headline">Every order,<br>accounted for.</h2>
+      <p class="login__sub">The administration panel for the Verdant demonstration store — customer orders, delivery details, messages and subscribers in one place.</p>
+      <ul class="login__points">
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Server-verified orders with full customer and delivery records</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Session-protected with HttpOnly cookies</span></li>
+        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Demonstration only — no real payments or shipping</span></li>
+      </ul>
+    </div>
+    <p class="login__foot">© <span id="loginYear">2026</span> Verdant · Administration</p>
+  </div>
+
+  <div class="login__form-wrap">
+    <div class="login__card">
+      <p class="eyebrow">Administration</p>
+      <h1>Sign in</h1>
+      <p>Enter the administrator credentials configured on the server.</p>
+
+      <div class="login__error" id="loginError" role="alert" aria-live="polite"></div>
+
+      <form class="login__form" id="loginForm" novalidate>
+        <div class="field">
+          <label for="adminUsername">Username</label>
+          <input type="text" id="adminUsername" name="username" autocomplete="username"
+                 spellcheck="false" autocapitalize="none" required aria-describedby="usernameErr">
+          <span class="field__error" id="usernameErr"></span>
+        </div>
+
+        <div class="field">
+          <label for="adminPassword">Password</label>
+          <div class="pw-wrap">
+            <input type="password" id="adminPassword" name="password" autocomplete="current-password"
+                   required aria-describedby="passwordErr">
+            <button type="button" class="pw-toggle" id="pwToggle"
+                    aria-label="Show password" aria-pressed="false">SHOW</button>
+          </div>
+          <span class="field__error" id="passwordErr"></span>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="submit" id="loginBtn">Sign in to dashboard</button>
+      </form>
+
+      <div class="login__note" id="loginConfigNote" hidden>
+        <strong>Credentials not configured.</strong><br>
+        Start the server with <code>ADMIN_USERNAME</code> and <code>ADMIN_PASSWORD</code> set, then reload this page.
+      </div>
+
+      <p class="login__note">
+        This is a demonstration system. Credentials are read from the server environment and never
+        stored in the browser. There is no public sign-up.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     DASHBOARD SHELL
+     ============================================================ -->
+<div class="shell" id="appShell" hidden>
+  <aside class="side">
+    <div class="side__logo">
+      <span class="side__mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+      <div>
+        <strong>Verdant</strong>
+        <span>Administration</span>
+      </div>
+    </div>
+
+    <p class="side__label">Manage</p>
+    <nav class="side__nav" aria-label="Admin sections">
+      <button class="nav-btn" type="button" data-view="overview" aria-current="page">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Overview
+      </button>
+      <button class="nav-btn" type="button" data-view="orders">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 2 4 6v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6l-2-4Z"/><path d="M4 6h16M16 10a4 4 0 0 1-8 0"/></svg>
+        Orders
+        <span class="nav-btn__count" id="navOrderCount" hidden>0</span>
+      </button>
+      <button class="nav-btn" type="button" data-view="messages">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>
+        Messages
+        <span class="nav-btn__count" id="navMsgCount" hidden>0</span>
+      </button>
+      <button class="nav-btn" type="button" data-view="subscribers">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>
+        Subscribers
+      </button>
+      <button class="nav-btn" type="button" data-view="products">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></svg>
+        Products
+      </button>
+    </nav>
+
+    <div class="side__spacer"></div>
+    <div class="side__user">
+      Signed in as
+      <strong id="sideUser">—</strong>
+      <span id="sideExpiry"></span>
+    </div>
+    <button class="nav-btn" type="button" id="logoutBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+      Sign out
+    </button>
+    <p class="side__foot">Demonstration system<br>No real payments or shipping.</p>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <div>
+        <h1 class="topbar__title" id="viewTitle">Dashboard overview</h1>
+        <p class="topbar__sub" id="viewSub">Live figures calculated by the Node.js server</p>
+      </div>
+      <div class="topbar__actions">
+        <button class="btn btn--outline btn--sm" type="button" id="refreshBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+          Refresh
+        </button>
+        <a class="btn btn--ghost btn--sm" href="/" target="_blank" rel="noopener">View store ↗</a>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="view" id="view-overview" aria-labelledby="viewTitle">
+      <div class="stats" id="statGrid"></div>
+      <div class="overview-grid">
+        <div class="panel">
+          <div class="panel__head">
+            <h2>Recent orders</h2>
+            <button class="btn btn--ghost btn--sm" type="button" data-goto="orders">View all →</button>
+          </div>
+          <div class="table-wrap" id="recentOrders"></div>
+        </div>
+        <div class="panel">
+          <div class="panel__head"><h2>Orders by status</h2></div>
+          <div class="panel__body"><div class="status-list" id="statusList"></div></div>
+        </div>
+      </div>
+      <div class="notice" id="overviewNotice">
+        <span aria-hidden="true">ℹ</span>
+        <span><strong>Demonstration system.</strong> Orders are stored on this machine in
+        <code>data/orders.json</code>. No payment is taken, nothing ships, and no email is sent.
+        Every order shows its real customer record exactly as submitted.</span>
+      </div>
+    </section>
+
+    <!-- ORDERS -->
+    <section class="view" id="view-orders" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2>All orders</h2>
+          <span class="tag tag--mint" id="orderCountTag">0 orders</span>
+        </div>
+        <div class="panel__body" style="padding-bottom:.6rem">
+          <div class="toolbar">
+            <div class="field">
+              <label for="orderSearch">Search</label>
+              <div class="search-wrap">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input type="search" id="orderSearch" placeholder="Order ID, name, email or phone" autocomplete="off">
+              </div>
+            </div>
+            <div class="field">
+              <label for="orderStatusFilter">Status</label>
+              <select id="orderStatusFilter">
+                <option value="all">All statuses</option>
+                <option>Pending</option><option>Confirmed</option><option>Processing</option>
+                <option>Shipped</option><option>Delivered</option><option>Cancelled</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="orderFrom">From date</label>
+              <input type="date" id="orderFrom">
+            </div>
+            <div class="field">
+              <label for="orderTo">To date</label>
+              <input type="date" id="orderTo">
+            </div>
+            <div class="field">
+              <label for="orderSort">Sort</label>
+              <select id="orderSort">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="value">Highest value</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap" id="ordersTable"></div>
+      </div>
+    </section>
+
+    <!-- MESSAGES -->
+    <section class="view" id="view-messages" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Customer messages</h2>
+          <span class="tag tag--mint" id="msgCountTag">0 messages</span>
+        </div>
+        <div class="panel__body" style="padding-bottom:.6rem">
+          <div class="chip-row" id="msgFilters" role="group" aria-label="Filter messages by status">
+            <button class="chip" type="button" data-msg-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-msg-filter="New" aria-pressed="false">New</button>
+            <button class="chip" type="button" data-msg-filter="Reviewed" aria-pressed="false">Reviewed</button>
+            <button class="chip" type="button" data-msg-filter="Resolved" aria-pressed="false">Resolved</button>
+          </div>
+        </div>
+        <div id="messagesList" style="padding:0 1.25rem 1.25rem"></div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIBERS -->
+    <section class="view" id="view-subscribers" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Newsletter subscribers</h2>
+          <span class="tag tag--mint" id="subCountTag">0 subscribers</span>
+        </div>
+        <div class="table-wrap" id="subscribersTable"></div>
+      </div>
+      <div class="notice notice--info">
+        <span aria-hidden="true">ℹ</span>
+        <span>Addresses are collected from the storefront newsletter form. No email service is connected —
+        nothing is ever sent.</span>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="view" id="view-products" hidden>
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Catalogue</h2>
+          <div style="display:flex; gap:.5rem; align-items:center; flex-wrap:wrap">
+            <span class="tag tag--mint" id="productCountTag">0 products</span>
+            <button class="btn btn--primary btn--sm" type="button" id="addProductBtn">+ Add product</button>
+          </div>
+        </div>
+        <div class="panel__body" style="padding-bottom:.6rem">
+          <div class="toolbar toolbar--wide">
+            <div class="field">
+              <label for="productSearch">Search products</label>
+              <div class="search-wrap">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input type="search" id="productSearch" placeholder="Name, id or category" autocomplete="off">
+              </div>
+            </div>
+            <div class="field">
+              <label for="productCategoryFilter">Category</label>
+              <select id="productCategoryFilter"><option value="all">All categories</option></select>
+            </div>
+            <div class="field">
+              <label for="productStockFilter">Availability</label>
+              <select id="productStockFilter">
+                <option value="all">All</option>
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrap" id="productsTable"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ============================================================
+     MODALS
+     ============================================================ -->
+<div class="modal" id="orderModal" hidden role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__panel">
+    <div class="modal__head">
+      <div>
+        <h2 id="orderModalTitle">Order details</h2>
+        <p id="orderModalSub"></p>
+      </div>
+      <button class="modal__close" type="button" data-close-modal aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal__body" id="orderModalBody"></div>
+    <div class="modal__foot" id="orderModalFoot"></div>
+  </div>
+</div>
+
+<div class="modal" id="productModal" hidden role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+  <div class="modal__backdrop" data-close-product></div>
+  <div class="modal__panel">
+    <div class="modal__head">
+      <div>
+        <h2 id="productModalTitle">Add product</h2>
+        <p id="productModalSub">Changes are saved to data/products.json and appear in the storefront.</p>
+      </div>
+      <button class="modal__close" type="button" data-close-product aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <form class="modal__body" id="productForm" novalidate>
+      <div class="form-grid">
+        <div class="field field--full">
+          <label for="pfName">Product name</label>
+          <input type="text" id="pfName" required maxlength="120">
+          <span class="field__error" id="pfNameErr"></span>
+        </div>
+        <div class="field">
+          <label for="pfPrice">Price (₹)</label>
+          <input type="number" id="pfPrice" min="1" step="1" required>
+          <span class="field__error" id="pfPriceErr"></span>
+        </div>
+        <div class="field">
+          <label for="pfOriginal">Original price (₹)</label>
+          <input type="number" id="pfOriginal" min="1" step="1">
+          <span class="field__error" id="pfOriginalErr"></span>
+        </div>
+        <div class="field">
+          <label for="pfCategory">Category</label>
+          <select id="pfCategory">
+            <option value="indoor">Indoor</option>
+            <option value="succulents">Succulents &amp; Cacti</option>
+            <option value="flowering">Flowering</option>
+            <option value="medicinal">Medicinal &amp; Herbs</option>
+            <option value="essentials">Gardening Essentials</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pfStock">Stock</label>
+          <input type="number" id="pfStock" min="0" step="1" required>
+          <span class="field__error" id="pfStockErr"></span>
+        </div>
+        <div class="field">
+          <label for="pfDifficulty">Difficulty</label>
+          <select id="pfDifficulty"><option>Easy</option><option>Moderate</option><option>Challenging</option></select>
+        </div>
+        <div class="field">
+          <label for="pfMaintenance">Maintenance</label>
+          <select id="pfMaintenance"><option>Low</option><option>Medium</option><option>High</option></select>
+        </div>
+        <div class="field field--full">
+          <label for="pfSci">Scientific name <span class="muted">(optional)</span></label>
+          <input type="text" id="pfSci" maxlength="120">
+        </div>
+        <div class="field field--full">
+          <label for="pfImg">Image path</label>
+          <input type="text" id="pfImg" placeholder="assets/img/monstera.jpg" maxlength="300">
+          <span class="field__hint">Relative to the project root. Leave blank to use a placeholder.</span>
+        </div>
+        <div class="field field--full">
+          <label for="pfDesc">Description</label>
+          <textarea id="pfDesc" rows="3" maxlength="500"></textarea>
+        </div>
+      </div>
+    </form>
+    <div class="modal__foot">
+      <button class="btn btn--outline" type="button" data-close-product>Cancel</button>
+      <button class="btn btn--primary" type="submit" form="productForm" id="productSaveBtn">Save product</button>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>
