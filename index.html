@@ -99,6 +99,7 @@
         <li><a class="nav__link nav__link--accent" href="#/recommender" data-nav="recommender">Recommender</a></li>
         <li><a class="nav__link" href="#/about" data-nav="about">About</a></li>
         <li><a class="nav__link" href="#/contact" data-nav="contact">Contact</a></li>
+        <li><a class="nav__link" href="#/account" data-nav="account">Login / Sign Up</a></li>
       </ul>
     </nav>
 
@@ -819,6 +820,46 @@
 </section>
 
 <!-- ============================================================
+     VIEW: CUSTOMER ACCOUNT (LOGIN / SIGN UP)
+     ============================================================ -->
+<section class="view" id="view-account" data-view="account" aria-labelledby="accountTitle" hidden>
+  <div class="account-page">
+    <div class="account-card">
+      <a class="account-brand" href="#/home">VERDANT</a>
+      <p class="eyebrow account-eyebrow">YOUR PLANT JOURNEY</p>
+      <h1 class="account-title" id="accountTitle">Welcome back</h1>
+      <p class="account-intro" id="accountIntro">Sign in to your VERDANT account.</p>
+
+      <form id="accountForm" class="account-form">
+        <div class="field" id="accountNameField" hidden>
+          <label for="accountName">Full name</label>
+          <input id="accountName" name="name" type="text" autocomplete="name" placeholder="Your full name">
+        </div>
+        <div class="field">
+          <label for="accountEmail">Email address</label>
+          <input id="accountEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="accountPassword">Password</label>
+          <input id="accountPassword" name="password" type="password" autocomplete="current-password" minlength="6" placeholder="At least 6 characters" required>
+        </div>
+        <button class="btn btn--primary account-submit" id="accountSubmit" type="submit">Login</button>
+      </form>
+
+      <p class="account-message" id="accountMessage" role="status" aria-live="polite"></p>
+      <p class="account-switch"><span id="accountSwitchText">New to VERDANT?</span>
+        <button type="button" id="accountSwitch" class="account-switch__button">Create an account</button>
+      </p>
+      <div class="account-signed-in" id="accountSignedIn" hidden>
+        <p id="accountWelcome"></p>
+        <button class="btn btn--outline" id="accountLogout" type="button">Log out</button>
+      </div>
+      <a class="account-back" href="#/home">← Back to the nursery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      VIEW: WISHLIST
      ============================================================ -->
 <section class="view" id="view-wishlist" data-view="wishlist" aria-labelledby="wishlistTitle" hidden>
@@ -1263,6 +1304,7 @@
   <div class="noscript">Verdant needs JavaScript for the shop, recommender and cart to work. Please enable JavaScript and reload.</div>
 </noscript>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 <script src="script.js" defer></script>
 </body>
 </html>
