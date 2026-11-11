@@ -2062,3 +2062,43 @@ main.is-switching *,main.is-switching *::before,main.is-switching *::after{
   .view[hidden]{display:none !important}
   .product-card,.care-card{break-inside:avoid}
 }
+
+
+/* ============ CUSTOMER ACCOUNT PAGE ============ */
+.account-page{
+  min-height:65vh; display:grid; place-items:center;
+  padding:clamp(2rem,6vw,5rem) 1rem;
+  background:radial-gradient(circle at 15% 15%,rgba(149,213,178,.24),transparent 32%),
+             linear-gradient(135deg,var(--cream),#edf7f1);
+}
+.account-card{
+  width:min(100%,470px); padding:clamp(1.5rem,5vw,3rem);
+  background:#fff; border:1px solid var(--line); border-radius:var(--r-xl);
+  box-shadow:var(--sh-lg);
+}
+.account-brand{
+  display:inline-block; margin-bottom:1.5rem; color:var(--green-800);
+  font-family:var(--font-serif); font-size:1.65rem; font-weight:700; letter-spacing:.12em;
+}
+.account-eyebrow{margin-bottom:.55rem}
+.account-title{font-size:clamp(2rem,5vw,2.65rem); margin-bottom:.55rem}
+.account-intro{color:var(--muted); margin-bottom:1.6rem}
+.account-form{display:grid; gap:1rem}
+.account-form .field{display:grid; gap:.4rem}
+.account-form .field label{font-size:.86rem; font-weight:600; color:var(--ink-soft)}
+.account-form input{
+  width:100%; min-height:48px; padding:.75rem .9rem;
+  border:1px solid var(--line-strong); border-radius:var(--r-sm);
+  background:#fff; outline:none; transition:border-color .2s,box-shadow .2s;
+}
+.account-form input:focus{border-color:var(--green-600); box-shadow:0 0 0 3px rgba(45,106,79,.12)}
+.account-submit{width:100%; justify-content:center; min-height:50px; margin-top:.3rem}
+.account-submit:disabled{opacity:.65; cursor:wait}
+.account-message{min-height:1.5rem; margin-top:1rem; font-size:.86rem; color:var(--muted)}
+.account-message.is-error{color:var(--danger)}
+.account-message.is-success{color:var(--success)}
+.account-switch{display:flex; flex-wrap:wrap; align-items:center; gap:.35rem; font-size:.88rem; color:var(--muted)}
+.account-switch__button{color:var(--green-700); font-weight:700}
+.account-switch__button:hover{text-decoration:underline}
+.account-signed-in{display:grid; gap:1rem; margin-top:1rem}
+.account-back{display:inline-block; margin-top:1.7rem; color:var(--green-700); font-size:.88rem}
