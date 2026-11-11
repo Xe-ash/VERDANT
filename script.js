@@ -85,6 +85,150 @@ const ROOM_ICONS = {
   Balcony: 'i-sun', Kitchen: 'i-soil', Bathroom: 'i-drop', 'Outdoor garden': 'i-leaf'
 };
 
+/* ============ CUSTOMER ACCOUNT — SUPABASE AUTH ============ */
+/*
+  Add your Supabase Project URL and Publishable (anon) key below.
+  These are public browser credentials. NEVER put a service_role/secret key here.
+*/
+const VERDANT_SUPABASE_URL = 'PASTE_YOUR_SUPABASE_PROJECT_URL';
+const VERDANT_SUPABASE_ANON_KEY = 'PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY';
+let verdantSupabase = null;
+let accountSignupMode = false;
+
+function getVerdantAuth() {
+  if (verdantSupabase) return verdantSupabase;
+  if (!window.supabase || VERDANT_SUPABASE_URL.startsWith('PASTE_') ||
+      VERDANT_SUPABASE_ANON_KEY.startsWith('PASTE_')) return null;
+  verdantSupabase = window.supabase.createClient(VERDANT_SUPABASE_URL, VERDANT_SUPABASE_ANON_KEY);
+  return verdantSupabase;
+}
+
+function setAccountMessage(message, type = '') {
+  const el = $('#accountMessage');
+  if (!el) return;
+  el.textContent = message;
+  el.className = 'account-message' + (type ? ' is-' + type : '');
+}
+
+function setAccountMode(signup) {
+  accountSignupMode = signup;
+  const nameField = $('#accountNameField');
+  const nameInput = $('#accountName');
+  const title = $('#accountTitle');
+  const intro = $('#accountIntro');
+  const submit = $('#accountSubmit');
+  const switchText = $('#accountSwitchText');
+  const switchButton = $('#accountSwitch');
+  if (!nameField || !nameInput) return;
+  nameField.hidden = !signup;
+  nameInput.required = signup;
+  $('#accountPassword').autocomplete = signup ? 'new-password' : 'current-password';
+  title.textContent = signup ? 'Create your account' : 'Welcome back';
+  intro.textContent = signup ? 'Join the VERDANT plant-loving community.' : 'Sign in to continue your plant journey.';
+  submit.textContent = signup ? 'Create account' : 'Login';
+  switchText.textContent = signup ? 'Already have an account?' : 'New to VERDANT?';
+  switchButton.textContent = signup ? 'Login instead' : 'Create an account';
+  setAccountMessage('');
+}
+
+async function refreshAccountView() {
+  const form = $('#accountForm');
+  const signedIn = $('#accountSignedIn');
+  const switchRow = $('.account-switch');
+  if (!form || !signedIn) return;
+  const auth = getVerdantAuth();
+  if (!auth) {
+    form.hidden = false;
+    signedIn.hidden = true;
+    if (switchRow) switchRow.hidden = false;
+    setAccountMessage('Connect Supabase first: add your Project URL and Publishable key in script.js.', 'error');
+    return;
+  }
+  try {
+    const { data: { session }, error } = await auth.auth.getSession();
+    if (error) throw error;
+    if (session) {
+      form.hidden = true;
+      signedIn.hidden = false;
+      if (switchRow) switchRow.hidden = true;
+      const user = session.user;
+      $('#accountWelcome').textContent = 'Signed in as ' + (user.user_metadata?.full_name || user.email || 'VERDANT customer') + '.';
+      setAccountMessage('You are successfully signed in.', 'success');
+    } else {
+      form.hidden = false;
+      signedIn.hidden = true;
+      if (switchRow) switchRow.hidden = false;
+      setAccountMode(accountSignupMode);
+    }
+  } catch (error) {
+    setAccountMessage(error.message || 'Could not check your account session.', 'error');
+  }
+}
+
+function wireAccount() {
+  const form = $('#accountForm');
+  if (!form) return;
+  const switchButton = $('#accountSwitch');
+  if (switchButton) switchButton.addEventListener('click', () => setAccountMode(!accountSignupMode));
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const auth = getVerdantAuth();
+    if (!auth) {
+      setAccountMessage('Supabase is not configured yet. Add the Project URL and Publishable key in script.js.', 'error');
+      return;
+    }
+    const email = $('#accountEmail').value.trim();
+    const password = $('#accountPassword').value;
+    const fullName = $('#accountName').value.trim();
+    const submit = $('#accountSubmit');
+    submit.disabled = true;
+    setAccountMessage(accountSignupMode ? 'Creating your account…' : 'Signing you in…');
+    try {
+      if (accountSignupMode) {
+        const { data, error } = await auth.auth.signUp({
+          email,
+          password,
+          options: { data: { full_name: fullName } }
+        });
+        if (error) throw error;
+        if (data.session) {
+          setAccountMessage('Account created successfully. Welcome to VERDANT!', 'success');
+          await refreshAccountView();
+        } else {
+          setAccountMessage('Account created. Check your email to confirm it, then log in.', 'success');
+        }
+      } else {
+        const { error } = await auth.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        setAccountMessage('Login successful.', 'success');
+        await refreshAccountView();
+      }
+    } catch (error) {
+      setAccountMessage(error.message || 'Something went wrong. Please try again.', 'error');
+    } finally {
+      submit.disabled = false;
+    }
+  });
+
+  const logout = $('#accountLogout');
+  if (logout) logout.addEventListener('click', async () => {
+    const auth = getVerdantAuth();
+    if (!auth) return;
+    const { error } = await auth.auth.signOut();
+    if (error) setAccountMessage(error.message, 'error');
+    else {
+      setAccountMode(false);
+      await refreshAccountView();
+    }
+  });
+
+  const auth = getVerdantAuth();
+  if (auth) auth.auth.onAuthStateChange(() => {
+    if (parseRoute().view === 'account') refreshAccountView();
+  });
+}
+
 /* ============ 02. SAFE UTILITIES ============ */
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
@@ -1664,7 +1808,7 @@ const CARE_TIPS = {
 };
 
 /* ============ 09. ROUTER (hash based) ============ */
-const VIEWS = ['home', 'shop', 'categories', 'care', 'recommender', 'about', 'contact', 'wishlist', 'cart', 'checkout', 'confirmation', 'dashboard'];
+const VIEWS = ['home', 'shop', 'categories', 'care', 'recommender', 'about', 'contact', 'account', 'wishlist', 'cart', 'checkout', 'confirmation', 'dashboard'];
 
 function parseRoute() {
   const raw = (location.hash || '#/home').replace(/^#\/?/, '');
@@ -1716,6 +1860,7 @@ const viewTitles = {
   recommender: 'Find your perfect plant — Verdant Recommender',
   about: 'About Verdant — Organic Plant Nursery',
   contact: 'Contact the nursery — Verdant',
+  account: 'Login / Sign Up — Verdant',
   wishlist: 'Your wishlist — Verdant',
   cart: 'Shopping cart — Verdant',
   checkout: 'Checkout (demo) — Verdant',
@@ -1755,6 +1900,7 @@ function handleRoute() {
   if (view === 'categories') renderCategoryCards($('#allCategoryGrid'), 'large');
   if (view === 'care') { renderCareTopics(); renderCareGuides(); }
   if (view === 'recommender') initRecommender();
+  if (view === 'account') refreshAccountView();
   if (view === 'wishlist') renderWishlist();
   if (view === 'cart') renderCart();
   if (view === 'checkout') renderCheckout();
@@ -4620,6 +4766,7 @@ function init() {
   syncFilterUI();
   bindProductGridEvents();
   wireHeader();
+  wireAccount();
   wireModalShell();
   wireShop();
   wireCartAndCheckout();
